@@ -13,7 +13,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 - :metal: SASS
 - :sparkles: CSS
 - :camel: VSCode
-- :tada: Github Desktop
+- :octocat: Github Desktop
 - 🖥 Iterm 2
 
 ## Project status
