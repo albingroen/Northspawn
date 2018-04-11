@@ -24,7 +24,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 - [ ] Finish build
 - [ ] Review of project
 
-## Idea of features
+## Ideas & features
 
 - Start page w/ news feed and comments
 - Register form for showing interest in joining event
