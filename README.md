@@ -14,6 +14,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 - :sparkles: CSS
 - :camel: VSCode
 - :tada: Github Desktop
+- 🖥 Iterm 2
 
 ## Project status
 - [ ] Create ideas
