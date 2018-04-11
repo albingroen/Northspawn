@@ -1,5 +1,11 @@
 # Northspawn
 
+## Initializing boilerplate
+
+```
+mkdir northspawn && cd northspawn && mkdir incs && mkdir imgs && touch index.php && cd styles && touch styles.scss
+```
+
 ## Tools and methods
 
 - 👍🏼 Php
