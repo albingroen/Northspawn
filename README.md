@@ -8,8 +8,6 @@
 - :camel: VSCode
 - :tada: Github Desktop
 
----
-
 ## Project status
 - [ ] Create ideas
 - [ ] Idea feedback from mentors
@@ -17,8 +15,6 @@
 - [ ] Start building
 - [ ] Finish build
 - [ ] Review of project
-
----
 
 ## Idea of features
 
