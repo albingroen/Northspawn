@@ -1,5 +1,16 @@
 # Northspawn
 
+## Tools and methods
+
+- :+1 Php
+- :metal: SASS
+- :sparkles: CSS
+- :camel: VSCode
+- :tada: Github Desktop
+
+---
+
+## Project status
 - [ ] Create ideas
 - [ ] Idea feedback from mentors
 - [ ] Project plan
