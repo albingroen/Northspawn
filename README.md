@@ -2,11 +2,11 @@
 
 ## Tools and methods
 
-:+1 Php
-:metal: SASS
-:sparkles: CSS
-:camel: VSCode
-:tada: Github Desktop
+- 👍🏼 Php
+- :metal: SASS
+- :sparkles: CSS
+- :camel: VSCode
+- :tada: Github Desktop
 
 ---
 
