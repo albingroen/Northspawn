@@ -9,7 +9,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 
 ## Tools and methods
 
-- 😅PHP
+- 😅 PHP
 - :metal: SASS
 - :sparkles: CSS
 - :camel: VSCode
