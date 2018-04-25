@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/landing/style.css">
+  
 </head>
 <body>
   <?php require('incs/header/header.php') ?>
@@ -27,7 +27,7 @@
     </section>
     <section class="section3">
       <div class="left" id="left3">
-        <h1>Hackathon</h1>
+        <h2>Hackathon</h2>
         <p>Vill du lära dig programmering? Skapa en ny APP? Eller kanske bygga din egen speldator? På NorthSpawn kommer det att finnas aktiviteter för alla! Utmana dig själv och prova att göra något nytt, eller gör något du är duktig på! Under eventet kommer det att finnas hackathons och workshops som utmanar hjärnan och ger möjligheter att både lära sig nya saker, men också att hjälpa företag att lösa verkliga problemställningar. </p>
       </div>
       <div class="right" id="right3"></div>

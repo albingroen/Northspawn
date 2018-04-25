@@ -31,7 +31,7 @@ section .left {
   height: 100%;
   width: calc(50% - 100px);
   padding: 50px;
-  background: #222;
+  background: #311c49;
   color: white;
 }
 
@@ -40,20 +40,14 @@ section .left h2 {
 }
 
 section .left p {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 20px;
   line-height: 25px;
   width: 80%;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .section2 {
   flex-direction: row-reverse;
 }
-
-.right {
-  width: 50%;
-  height: 100%;
-  background: dodgerblue;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */
