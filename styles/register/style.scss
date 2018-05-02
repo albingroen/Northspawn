@@ -30,6 +30,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #333;
 
   form {
     display: flex;
@@ -37,22 +38,24 @@ header {
     width: 350px;
 
     input {
-      font-size: 16px;
-      padding: 13px;
+      font-size: 14px;
+      padding: 15px;
       border-radius: 5px;
       margin-bottom: 15px;
       border: none;
-      background: #eeeeee;
-      transition: .2s ease-out 0s;
-      border: 1.5px solid white;
+      background: #eeeeee15;
+      transition: 0.2s ease-out 0s;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
       &::placeholder {
-        opacity: .3;
-        transition: .2s ease-out 0s;
+        opacity: 0.7;
+        transition: 0.2s ease-out 0s;
       }
       &:focus {
         outline: none;
-        border: 1.5px solid dodgerblue;
-        transition: .2s ease-out 0s;
+        transition: 0.2s ease-out 0s;
       }
     }
 
@@ -64,6 +67,7 @@ header {
       font-size: 16px;
       margin-top: 30px;
       color: white;
+      cursor: pointer;
     }
   }
 }

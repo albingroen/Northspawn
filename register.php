@@ -1,18 +1,20 @@
-<?php 
 
-  $firstName = '';
-  $lastName = '';
-  $email = '';
+<?php
 
-  if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email'])){
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];  
+  $db = new PDO("sqlite:Northspawn.db");
+
+  $firstName = null;
+  $lastName = null;
+  $email = null;
+
+  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) ){
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $email = $_POST["email"];  
+    
+    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email) VALUES ('{$firstName}', '{$lastName}', '{$email}'})");
+    $stmt->execute();
   }
-
-  $db = new PDO('sqlite:Northspawn');
-  $users = $db->prepare("SELECT * FROM users");
-  echo $users;
 
 ?>
 
@@ -39,7 +41,7 @@
       <button>Registrera</button>
     </form>
     
-    <h2><?php echo $firstName ?></h2>
+    
 
   </div>
   <?php require('incs/footer/footer.php') ?>

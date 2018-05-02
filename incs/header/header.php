@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li><a href="#">Start</a></li>
-    <li><a href="#">Registrera</a></li>
+    <li><a href="register.php">Registrera</a></li>
     <li><a href="#">Logga in</a></li>
     <li><a href="#">Om eventet</a></li>
   </ul>
