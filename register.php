@@ -12,7 +12,7 @@
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];  
     
-    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email) VALUES ('{$firstName}', '{$lastName}', '{$email}'})");
+    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email) VALUES ('{$firstName}', '{$lastName}', '{$email}')");
     $stmt->execute();
   }
 
