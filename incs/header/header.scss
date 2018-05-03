@@ -1,12 +1,19 @@
 nav {
   position: absolute;
-  top: 50px;
-  right: 75px;
+  background: #222;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 
   ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
 
     li {
       padding: 0;
@@ -14,17 +21,33 @@ nav {
       color: white;
       font-size: 16px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2.5px;
+      position: relative;
 
       a {
         color: white;
         text-decoration: none;
-        margin-left: 15px;
-        border-radius: 5px;
+        margin-left: 25px;
         border: 1px dashed rgba(128, 128, 128, 0);
         padding: 10px;
+        font-weight: 600;
         &:hover {
-          border: 1px dashed rgba(255, 255, 255, 0.521);
+          text-decoration: line-through;
+        }
+      }
+
+      #button {
+        background: white;
+        color: #333;
+        padding: 17px 30px 17px 30px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: 0.2s ease-out 0s;
+        width: 200px;
+        &:hover {
+          text-decoration: none;
+
+          transition: 0.2s ease-out 0s;
         }
       }
     }
@@ -32,7 +55,6 @@ nav {
 }
 
 .header {
-  width: 100vw;
   height: 650px;
   display: flex;
   justify-content: center;
@@ -42,9 +64,31 @@ nav {
   background-position: center;
   background-size: cover;
 
-  .logo {
-    width: 220px;
-    margin-top: 30px;
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+    .logo {
+      width: 220px;
+    }
+
+    .date {
+      margin: 0;
+      padding: 0;
+      color: #333;
+      font-weight: 700;
+      opacity: 1;
+      background: white;
+      padding: 8.5px 17px 8.5px 17px;
+      margin-left: 30px;
+      text-transform: uppercase;
+      border-radius: 1px;
+    }
   }
 
   h3 {
@@ -55,31 +99,232 @@ nav {
   }
 
   h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 43px;
-    width: 50%;
-    line-height: 60px;
-    font-weight: 700;
     text-align: center;
-    margin-bottom: 35px;
+    color: #fff;
+    font-size: 9em;
+
+    letter-spacing: 0px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: 'Helvetica Neue' !important;
+
+    /*Create overlap*/
+    line-height: 2px;
+    /*Animation*/
+
+    animation: glitch1 1.5s infinite;
   }
 
-  button {
-    color: white;
-    background: #65c979;
-    border-radius: 50px;
-    padding: 17px 30px 17px 30px;
-    font-size: 17px;
-    border: none;
-    transition: 0.2s ease-out 0s;
-    cursor: pointer;
-    &:hover {
-      background: darken(#65c979, 5%);
-      transition: 0.2s ease-out 0s;
+  h1:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 1.5s infinite;
+  }
+
+  h1:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 1.5s infinite;
+  }
+  /*Keyframes*/
+
+  @keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
     }
-    &:focus {
-      outline: none;
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-2deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: skew(-2deg, 0.4deg);
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: skew(0.4deg, 5deg);
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @keyframes glitch2 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(-2px, -3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(-5px, -2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(-5px, -1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(-2px, -6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+
+  @keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(2px, 3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(5px, 2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(5px, 1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(2px, 6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+
+  h2 {
+    color: white;
+    margin-top: 80px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    button {
+      border: 1px solid white;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: white;
+      padding: 17px 30px 17px 30px;
+      background: none;
+      font-weight: 500;
+      letter-spacing: 2px;
+      transition: 0.1s ease-out 0s;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+        background: white;
+
+        color: #333;
+        transition: 0.1s ease-out 0s;
+        font-weight: 700;
+      }
     }
   }
 }

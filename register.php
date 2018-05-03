@@ -6,12 +6,14 @@
   $firstName = null;
   $lastName = null;
   $email = null;
+  $product = null;
 
-  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) ){
+  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["product"])){
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
     $email = $_POST["email"];  
-    
+    $product = $_POST["product"];
+
     $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email) VALUES ('{$firstName}', '{$lastName}', '{$email}')");
     $stmt->execute();
   }
@@ -35,14 +37,18 @@
   </header>
   <div class="content">
     <form method="POST">
-      <input autocomplete="new" type="text" name="firstName" placeholder="Förnamn" >
-      <input autocomplete="new" type="text" name="lastName" placeholder="Efternamn" >
-      <input autocomplete="new" type="text" name="email" placeholder="Epost-address" >
+      <input type="text" name="firstName" placeholder="Förnamn" >
+      <input type="text" name="lastName" placeholder="Efternamn" >
+      <input type="text" name="email" placeholder="Epost-address" >
+      <!-- <input type="text" name="order" placeholder="Biljett"> -->
+      <br>
+      <select name="product" >
+        <option value="1" >Basic</option>
+        <option value="2" >Premium</option>
+        <option value="3" >VIP</option>
+      </select>
       <button>Registrera</button>
     </form>
-    
-    
-
   </div>
   <?php require('incs/footer/footer.php') ?>
 </body>
