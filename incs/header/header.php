@@ -25,6 +25,7 @@
         <div class="thumbnail"></div>
 MESSAGE;
       } else {
+        // Displaying login and register when no user is signed in
         echo <<<CONTENT
         <li><a href=index.php?pageid=login>Logga in</a></li>
         <li><a href="index.php?pageid=register">Registrera</a></li>
