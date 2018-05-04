@@ -51,7 +51,13 @@
 	else
 	{
     $pageid =htmlspecialchars($_GET['pageid']);	//filtrera och spara värdet i variabeln
-	}
+  }
+  
+  if(!empty($_POST['accept'])){
+    $_SESSION['cookies'] = 'none';    
+  } else {
+    $_SESSION['cookies'] = 'flex';
+  }
 	
 	//här bygger vi upp sidan
 	

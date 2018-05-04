@@ -77,5 +77,10 @@ section .left p {
   padding: 10px 15px 10px 15px;
   border: none;
   color: white;
+  cursor: pointer;
+}
+
+.cookies input:hover {
+  background: #006ad1;
 }
 /*# sourceMappingURL=style.css.map */

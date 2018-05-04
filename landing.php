@@ -1,7 +1,10 @@
 <div class="content">
-  <div class="cookies">      
+  <div style="display: <?php echo $_SESSION['cookies']; ?>" class="cookies">      
     <p>Vi använder cookies för att göra din upplevelse bättre. Veganska cookies för en bättre miljö såklart.</p>
-    <input type="submit" value="Jag förstår">      
+    <form method="post">
+      <input type="submit" value="Jag förstår">      
+      <input type="hidden" name="accept" value="true">;
+    </form>
   </div>
   <section>
     <div class="left" id="left1">
