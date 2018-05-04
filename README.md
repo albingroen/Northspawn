@@ -20,9 +20,9 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 ## Project status
 
 * [x] Create ideas
-* [ ] Idea feedback from mentors
-* [ ] Project plan
-* [ ] Start building
+* [x] Idea feedback from mentors
+* [x] Project plan
+* [x] Start building
 * [ ] Finish build
 * [ ] Review of project
 
