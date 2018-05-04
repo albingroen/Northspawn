@@ -6,15 +6,17 @@
   $firstName = null;
   $lastName = null;
   $email = null;
-  $product = null;
+  $password = null;
+  // $password = null;
 
-  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["product"])){
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
-    $email = $_POST["email"];  
-    $product = $_POST["product"];
+  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["password"])){
+    $firstName = htmlspecialchars($_POST["firstName"]);
+    $lastName = htmlspecialchars($_POST["lastName"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
+    
 
-    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email) VALUES ('{$firstName}', '{$lastName}', '{$email}')");
+    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
     $stmt->execute();
   }
 
@@ -39,17 +41,19 @@
     <form method="POST">
       <input type="text" name="firstName" placeholder="Förnamn" >
       <input type="text" name="lastName" placeholder="Efternamn" >
-      <input type="text" name="email" placeholder="Epost-address" >
+      <input autocomplete="new-email" type="text" name="email" placeholder="Epost-address" >
+      <input autocomplete="new-password" type="password" name="password" placeholder="Lösenord" >
       <!-- <input type="text" name="order" placeholder="Biljett"> -->
       <br>
-      <select name="product" >
+      <!-- <select name="product" >
         <option value="1" >Basic</option>
         <option value="2" >Premium</option>
         <option value="3" >VIP</option>
-      </select>
+      </select> -->
       <button>Registrera</button>
     </form>
   </div>
+  
   <?php require('incs/footer/footer.php') ?>
 </body>
 </html>

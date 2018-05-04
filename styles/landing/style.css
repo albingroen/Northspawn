@@ -50,4 +50,32 @@ section .left p {
 .section2 {
   flex-direction: row-reverse;
 }
+
+.cookies {
+  background: dodgerblue;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 100px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookies p {
+  margin-left: 75px;
+  font-size: 17px;
+  color: white;
+}
+
+.cookies input {
+  margin-right: 75px;
+  background: #0077ea;
+  border-radius: 50px;
+  font-size: 15px;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
