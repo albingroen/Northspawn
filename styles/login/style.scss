@@ -1,0 +1,75 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../imgs/games-bg.png');
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+}
+
+header .logo {
+  width: 220px;
+  margin-top: 30px;
+}
+
+header h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.content {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.content form input {
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: none;
+  background: #eeeeee15;
+  transition: 0.2s ease-out 0s;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content form input::placeholder {
+  opacity: 0.7;
+  transition: 0.2s ease-out 0s;
+}
+
+.content form input:focus {
+  outline: none;
+  transition: 0.2s ease-out 0s;
+}
+
+.content form button {
+  background: #2868a0;
+  border-radius: 5px;
+  border: none;
+  padding: 13px;
+  font-size: 16px;
+  margin-top: 30px;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

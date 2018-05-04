@@ -4,3 +4,5 @@
 <style>
   <?php include('footer.css') ?>
 </style>
+</body>
+</html>
