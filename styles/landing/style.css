@@ -1,3 +1,7 @@
+button:focus {
+  outline: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +21,59 @@ p,
 a,
 span {
   font-weight: 400;
+}
+
+.about {
+  width: 100%;
+  min-height: 500px;
+  background: #1a0f2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 40px;
+  font-size: 33px;
+  padding-top: 75px;
+}
+
+.about .date {
+  border: 1.5px solid rgba(255, 255, 255, 0.158);
+  border-radius: 5px;
+  padding: 25px 30px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.about .date h4 {
+  color: rgba(255, 255, 255, 0.315);
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.about .date h3 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about p {
+  color: rgba(255, 255, 255, 0.425);
+  padding-top: 50px;
+  max-width: 60%;
+  text-align: center;
+  padding-bottom: 150px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 section {

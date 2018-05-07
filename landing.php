@@ -1,10 +1,19 @@
 <div class="content">
+
   <div style="display: <?php echo $_SESSION['cookies']; ?>" class="cookies">      
     <p>Vi använder cookies för att göra din upplevelse bättre. Veganska cookies för en bättre miljö såklart.</p>
     <form method="post">
       <input type="submit" value="Jag förstår">      
       <input type="hidden" name="accept" value="true">;
     </form>
+  </div>
+  <div class="about">
+    <h2>Om eventet</h2>
+    <div class="date">
+      <h4>Aros Congress Center</h4>
+      <h3>18 November - 21 November </h3>      
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolores asperiores porro possimus, officiis fugit atque. Soluta excepturi similique ipsa quia explicabo, cupiditate rem voluptatem quas? Placeat, repudiandae veniam consequuntur perspiciatis harum modi? Distinctio minus asperiores quibusdam, autem consequuntur quos dolorem, a hic voluptas adipisci eos facilis totam aspernatur error odit aliquid voluptatem ab optio inventore. Eveniet ratione quis corrupti, impedit magnam esse omnis necessitatibus delectus cum nisi hic, aspernatur cumque dolore. Ratione minus non aliquam veritatis laborum explicabo earum possimus repudiandae eum alias veniam, necessitatibus incidunt, ipsa sunt! Suscipit ex expedita voluptas? Ab id nostrum ipsum, dolorum quisquam dolorem?</p>
   </div>
   <section>
     <div class="left" id="left1">

@@ -13,7 +13,7 @@
   $email = null;
   $password = null;
   
-  if(!empty($_POST["email"]) && !empty($_POST["password"])){
+  if(!empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST['loginCheck']) ){
     // Declaring the post paramters for input by user on login
     $email = htmlspecialchars($_POST["email"]);  
     $password = htmlspecialchars($_POST["password"]);
@@ -58,11 +58,28 @@
   } else {
     $_SESSION['cookies'] = 'flex';
   }
+
+  // Adding user to database
+
+  $firstName = null;
+  $lastName = null;
+  
+  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["password"])){
+    $firstName = htmlspecialchars($_POST["firstName"]);
+    $lastName = htmlspecialchars($_POST["lastName"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
+  
+    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
+    $stmt->execute();
+  }
+
+  
 	
-	//här bygger vi upp sidan
+	// Building page depending on GET parameters to index.php
 	
-	require("incs/header/header.php");	//här laddar vi in headern
+	require("incs/header/header.php");	
 	
-	require("{$pageid}.php");	//här laddar vi in informationen
+	require("{$pageid}.php");	
 	
-	require("incs/footer/footer.php");	//här laddar vi in headern
+	require("incs/footer/footer.php");	

@@ -41,7 +41,7 @@ CONTENT;
   </div>
   <h1>Lan. E-sport. Gaming. Hackathon. Expo. Välkommen till Northspawn</h1>
   <div class="button-wrapper">
-    <button>Skapa konto</button>
+    <a href="index.php?pageid=register"><button>Skapa konto</button></a>
     <button>Läs mer</button>
   </div>
 </div>
