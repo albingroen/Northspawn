@@ -72,6 +72,10 @@
   
     $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
     $stmt->execute();
+    $msg = "First line of text\nSecond line of text";
+    $msg = wordwrap($msg,70);
+    mail("albin.groen@gmail.com","My subject",$msg);
+
   }
 
   

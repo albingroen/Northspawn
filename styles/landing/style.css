@@ -67,13 +67,13 @@ span {
 }
 
 .about p {
-  color: rgba(255, 255, 255, 0.425);
+  color: rgba(255, 255, 255, 0.5);
   padding-top: 50px;
   max-width: 60%;
   text-align: center;
-  padding-bottom: 150px;
-  font-size: 17px;
-  line-height: 25px;
+  padding-bottom: 130px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 section {

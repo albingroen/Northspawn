@@ -13,7 +13,9 @@
       <h4>Aros Congress Center</h4>
       <h3>18 November - 21 November </h3>      
     </div>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolores asperiores porro possimus, officiis fugit atque. Soluta excepturi similique ipsa quia explicabo, cupiditate rem voluptatem quas? Placeat, repudiandae veniam consequuntur perspiciatis harum modi? Distinctio minus asperiores quibusdam, autem consequuntur quos dolorem, a hic voluptas adipisci eos facilis totam aspernatur error odit aliquid voluptatem ab optio inventore. Eveniet ratione quis corrupti, impedit magnam esse omnis necessitatibus delectus cum nisi hic, aspernatur cumque dolore. Ratione minus non aliquam veritatis laborum explicabo earum possimus repudiandae eum alias veniam, necessitatibus incidunt, ipsa sunt! Suscipit ex expedita voluptas? Ab id nostrum ipsum, dolorum quisquam dolorem?</p>
+    <p>Ambitionen med NorthSpawn är att skapa ett årligt återkommande event med spel och gaming som huvudfokus. Eventet ligger i linje med Västmanlands ambition att vara en attraktiv region med högteknologisk kompetens och industrier i teknikens framkant. Vi hoppas att NorthSpawn kan bidra till regionens utveckling och skapa en levande mötesplats för spelare och IT-intresserade. NorthSpawn ska även vara en plattform för att skapa värdefulla kontaktytor mellan näringslivet och den kompetens som finns inom spelvärlden.
+    Idéen kring Northspawn bygger på samarbete mellan en mängd aktörer av varierad typ och storlek som på olika sätt bidrar till att göra denna framtidssatsning möjlig. 
+    </p>
   </div>
   <section>
     <div class="left" id="left1">
