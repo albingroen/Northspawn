@@ -16,6 +16,12 @@ nav ul {
   justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
+
 nav ul .left .logo {
   width: 175px;
 }
@@ -87,7 +93,7 @@ nav ul .right li #button:hover {
 }
 
 .header {
-  min-height: 600px;
+  min-height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +101,6 @@ nav ul .right li #button:hover {
   background-image: url("./imgs/hackathon.png");
   background-position: center;
   background-size: cover;
-  padding-bottom: 100px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -153,8 +158,8 @@ nav ul .right li #button:hover {
 
 @media (max-width: 400px) {
   .header h1 {
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 32px;
+    line-height: 45px;
   }
 }
 
@@ -174,6 +179,14 @@ nav ul .right li #button:hover {
   padding-top: 40px;
 }
 
+@media (max-width: 768px) {
+  .header .button-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .header .button-wrapper button {
   border: 3px solid white;
   text-transform: uppercase;
@@ -186,6 +199,13 @@ nav ul .right li #button:hover {
   transition: 0.1s ease-out 0s;
   cursor: pointer;
   border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .header .button-wrapper button {
+    margin: 0;
+    width: 200px;
+  }
 }
 
 .header .button-wrapper button:nth-child(1) {
@@ -201,6 +221,13 @@ nav ul .right li #button:hover {
 
 .header .button-wrapper button:nth-child(2) {
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .header .button-wrapper button:nth-child(2) {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 }
 
 .header .button-wrapper button:hover {

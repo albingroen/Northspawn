@@ -27,7 +27,7 @@
     // Checking if the input details matches with the databse details for that email,
     // and then storing the email in the session
     if(password_verify($password, $passwordDb[0])){      
-      $_SESSION['user'] = $email;
+      $_SESSION['user'] = $email;      
     } else {
       echo 'Username or password incorrect';
     }
@@ -71,8 +71,6 @@
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
     $confirmedPasword = $_POST['confirm-password'];
 
-    
-  
     if(htmlspecialchars($_POST['password']) === $confirmedPasword){
       $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
       $stmt->execute();

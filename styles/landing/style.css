@@ -42,6 +42,14 @@ span {
   padding-top: 75px;
 }
 
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+  }
+}
+
 .about .date {
   border: 1.5px solid rgba(255, 255, 255, 0.158);
   border-radius: 5px;
@@ -53,11 +61,25 @@ span {
   min-width: 300px;
 }
 
+@media (max-width: 768px) {
+  .about .date {
+    padding-left: 0;
+    padding-right: 0;
+    width: 70%;
+  }
+}
+
 .about .date h4 {
   color: rgba(255, 255, 255, 0.315);
   font-size: 20px;
   text-align: center;
   padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .about .date h4 {
+    font-size: 16.5px;
+  }
 }
 
 .about .date h3 {
@@ -66,22 +88,44 @@ span {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .about .date h3 {
+    font-size: 20px;
+  }
+}
+
 .about p {
   color: rgba(255, 255, 255, 0.5);
   padding-top: 50px;
   max-width: 60%;
+  padding-bottom: 90px;
   text-align: center;
-  padding-bottom: 130px;
   font-size: 18px;
   line-height: 27px;
 }
 
+@media (max-width: 768px) {
+  .about p {
+    font-size: 15px;
+    max-width: 85%;
+    line-height: 20px;
+    padding-bottom: 70px;
+    padding-top: 35px;
+  }
+}
+
 section {
   width: 100%;
-  min-height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 section .right {
@@ -89,6 +133,12 @@ section .right {
   background-size: cover;
   width: 50%;
   min-height: 250px;
+}
+
+@media (max-width: 768px) {
+  section .right {
+    width: 100%;
+  }
 }
 
 section #right1 {
@@ -110,8 +160,26 @@ section .left {
   color: white;
 }
 
+@media (max-width: 768px) {
+  section .left {
+    width: calc(100% - 100px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+}
+
 section .left h2 {
   font-size: 33px;
+}
+
+@media (max-width: 768px) {
+  section .left h2 {
+    font-size: 25px;
+  }
 }
 
 section .left p {
@@ -122,8 +190,26 @@ section .left p {
   opacity: 0.5;
 }
 
+@media (max-width: 768px) {
+  section .left p {
+    font-size: 15px;
+    width: 80vw;
+    line-height: 20px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    margin: 0px;
+  }
+}
+
 .section2 {
   flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .cookies {

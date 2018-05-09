@@ -51,9 +51,6 @@ CONTENT;
   </ul>
 </nav>
 <div class="header">
-  <div class="info">
-    <h3 class="date" >november 1 - 4</h3>
-  </div>
   <h1><?php echo $title; ?></h1>
   <div class="button-wrapper">
     <a href="index.php?pageid=register"><button>Skapa konto</button></a>

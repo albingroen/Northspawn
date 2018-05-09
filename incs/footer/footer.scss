@@ -10,18 +10,30 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    padding-left: 100px;
-    padding-right: 100px;
     height: 50%;
+    padding-left: 10%;
+    padding-right: 5%;
+    @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+    }
 
     li {
       list-style-type: none;
       margin-top: 10px;
+      @media (max-width: 768px) {
+        margin-top: 0px;
+      }
 
       a {
         color: rgba(255, 255, 255, 0.445);
@@ -30,6 +42,16 @@
         &:hover {
           color: rgba(255, 255, 255, 0.85);
           transition: 0.1s ease-out 0s;
+        }
+        @media (max-width: 768px) {
+          padding: 20px;
+          display: block;
+          transition: 0.1s ease-out 0s;
+          border-radius: 5px;
+          &:focus {
+            background: #333;
+            transition: 0.1s ease-out 0s;
+          }
         }
       }
     }
