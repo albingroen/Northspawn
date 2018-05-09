@@ -83,8 +83,26 @@ section {
   flex-direction: row;
   justify-content: space-between;
 
+  .right {
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    min-height: 250px;
+  }
+
+  #right1 {
+    background-image: url('./imgs/lan.jpg');
+  }
+
+  #right2 {
+    background-image: url('./imgs/games-bg.png');
+  }
+
+  #right3 {
+    background-image: url('./imgs/hackathon.jpg');
+  }
+
   .left {
-    height: 100%;
     width: calc(50% - 100px);
     padding: 50px;
     background: rgb(49, 28, 73);

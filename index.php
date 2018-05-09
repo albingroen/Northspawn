@@ -1,6 +1,7 @@
 <?php
   session_start(); // Starting session
 
+
   // Connecting to the database for Northspawn project
   $db = new PDO("sqlite:Northspawn.db"); 
 
@@ -54,34 +55,42 @@
   }
   
   if(!empty($_POST['accept'])){
-    $_SESSION['cookies'] = 'none';    
+    $_SESSION['cookies'] = TRUE;
   } else {
-    $_SESSION['cookies'] = 'flex';
+    $_SESSION['cookies'] = FALSE;
   }
 
   // Adding user to database
-
   $firstName = null;
   $lastName = null;
   
-  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["password"])){
+  if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm-password"])){
     $firstName = htmlspecialchars($_POST["firstName"]);
     $lastName = htmlspecialchars($_POST["lastName"]);
     $email = htmlspecialchars($_POST["email"]);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
+    $confirmedPasword = $_POST['confirm-password'];
+
+    
   
-    $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
-    $stmt->execute();
+    if(htmlspecialchars($_POST['password']) === $confirmedPasword){
+      $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
+      $stmt->execute();
+    } else {
+      echo '';
+    }
+
+    // Send a email after registration to user    
     $msg = "First line of text\nSecond line of text";
-    $msg = wordwrap($msg,70);
-    mail("albin.groen@gmail.com","My subject",$msg);
+    $msg = wordwrap($msg,70);    
+    $subject = "Välkommen till Northspawn.se!";
+    mail("albin.groen@gmail.com", $subject, $msg); // usign $email from register to send to
 
   }
 
   
 	
 	// Building page depending on GET parameters to index.php
-	
 	require("incs/header/header.php");	
 	
 	require("{$pageid}.php");	

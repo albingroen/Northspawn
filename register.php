@@ -3,10 +3,11 @@
 <img class="logo" src="./imgs/Northspawn_logo_vit.png" alt="">
 <h2>Registrera hos Northspawn</h2>
   <form action="index.php?pageid=login" method="POST">
-    <input type="text" name="firstName" placeholder="Förnamn" >
-    <input type="text" name="lastName" placeholder="Efternamn" >
-    <input autocomplete="new-email" type="text" name="email" placeholder="Epost-address" >
-    <input autocomplete="new-password" type="password" name="password" placeholder="Lösenord" >    
+    <input type="text" name="firstName" placeholder="Förnamn" min="2" max="268" >
+    <input type="text" name="lastName" placeholder="Efternamn" min="2" max="268" >
+    <input autocomplete="new-email" type="email" name="email" placeholder="Epost-address" min="10" max="268" >
+    <input autocomplete="new-password" type="password" name="password" placeholder="Lösenord" min="5" max="268" >    
+    <input autocomplete="new-password" type="password" name="confirm-password" placeholder="Bekräfta lösenord" min="5" max="268" >    
     <br>
    
     <button>Registrera</button>

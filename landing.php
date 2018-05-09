@@ -1,12 +1,21 @@
 <div class="content">
+  <!-- <?php 
+  
+    if($_SESSION['cookies'] == FALSE){
+      echo <<<COOKIES
+      <div class="cookies">      
+        <p>Vi använder cookies för att göra din upplevelse bättre. Veganska cookies för en bättre miljö såklart.</p>
+        <form method="post">
+          <input type="submit" value="Jag förstår">      
+          <input type="hidden" name="accept" value="true">;
+        </form>
+      </div>
+COOKIES;
+    } else {
+      echo '';
+    }
 
-  <div style="display: <?php echo $_SESSION['cookies']; ?>" class="cookies">      
-    <p>Vi använder cookies för att göra din upplevelse bättre. Veganska cookies för en bättre miljö såklart.</p>
-    <form method="post">
-      <input type="submit" value="Jag förstår">      
-      <input type="hidden" name="accept" value="true">;
-    </form>
-  </div>
+  ?> -->
   <div class="about">
     <h2>Om eventet</h2>
     <div class="date">

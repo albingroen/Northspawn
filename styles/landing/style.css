@@ -84,8 +84,26 @@ section {
   justify-content: space-between;
 }
 
+section .right {
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 250px;
+}
+
+section #right1 {
+  background-image: url("./imgs/lan.jpg");
+}
+
+section #right2 {
+  background-image: url("./imgs/games-bg.png");
+}
+
+section #right3 {
+  background-image: url("./imgs/hackathon.jpg");
+}
+
 section .left {
-  height: 100%;
   width: calc(50% - 100px);
   padding: 50px;
   background: #311c49;
