@@ -43,6 +43,12 @@ Adding an user to the database was no problem, with a few sql injections and if-
 
 I also decided to create a functionality for being able to load in pages dynamically. For doing this you need something called a page-controller. I created one of these, where i also set `session_start()` and some other variables that need to be globally aplied through out the site. Now I could simply go to pages by doing `index.php?pageid=login` were `index.php` then also would contain header and footer. I think doing this was a good choise and will help me in the future of building the website.
 
+## 2018-05-09
+
+The past days, including today, I have spent on designing and implementing at the site. I added the proper images that for now just are placeholder images. I added the content for the footer with all close to all links needed. I also styled the footer, and continued the styling on the login and register page. I included a illustration of a avatar which is shown when signed in.
+
+Today, I also started doing some testing on the website to make sure everything worked properly on different browesers like Safari and Firefox. I took a general website compatability test which gave me a below average score in Sweden. The results also showed me what had to be improved on the site in general. I wrote these down and started on working on making my site responsive. I began with making the landing-page responsive, which turned out pretty good. I also decided to spin the website up on the webserver via FileZilla client to view it on a phone for the first time. Everything but the Login and Register pages looked and worked good as expected.
+
 ---
 
 ## Tests
