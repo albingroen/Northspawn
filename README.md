@@ -180,3 +180,17 @@ https://webbriktlinjer.se/testa-din-webbplats/?start
 * [ ] Bigger clickable areas for mobile users
 * [ ] Add contact info in footer
 * [ ] Show focus when navigating with keyboard
+
+### Broswer test
+
+#### Google Chrome
+
+The browser that the website actually is developed in. The site looks good with nice strokes on borders and proper styling on text in form of font weight.
+
+#### Apple Safari
+
+In Safari the site overall looks good. The main differences between these two are the font. Here the font looks a bit skinny. Login and registration works properly.
+
+#### Mozilla Firefox
+
+Site looks very good, in fact more or less identical to how it looks on Google Chrome. Login and registration works properly.
