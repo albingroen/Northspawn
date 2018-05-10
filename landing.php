@@ -54,6 +54,7 @@ COOKIES;
   </section>
 
   <div class="newsFeed">
+    <h2 class="title" >Nyheter om eventet</h2>
     <?php
 
       while($newsItem = $news->fetch()){

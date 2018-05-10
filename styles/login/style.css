@@ -16,6 +16,12 @@ body {
   background: #1a0f2d;
 }
 
+.content h4 {
+  color: coral;
+  margin-top: 25px;
+  font-weight: normal;
+}
+
 .content form {
   display: flex;
   flex-direction: column;

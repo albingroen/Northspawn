@@ -247,8 +247,28 @@ section .left p {
 
 .newsFeed {
   max-width: 900px;
-  padding: 30px;
+  padding: 50px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsFeed .title {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 33px;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .newsFeed .title {
+    font-size: 25px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+  }
 }
 
 .newsFeed .newsItem {

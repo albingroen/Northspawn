@@ -28,8 +28,9 @@
     // and then storing the email in the session
     if(password_verify($password, $passwordDb[0])){      
       $_SESSION['user'] = $email;      
-    } else {
-      echo 'Username or password incorrect';
+    } else {      
+      header("Location: index.php?pageid=login&err=TRUE");
+      exit();      
     }
   }
 
@@ -94,3 +95,27 @@
 	require("{$pageid}.php");	
 	
 	require("incs/footer/footer.php");	
+
+  ?>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/solid.css" integrity="sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf" crossorigin="anonymous">
+    <style>
+      .chatWindow {
+        height: 75px;
+        width: 75px;
+        background: dodgerblue;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <div class="chatWindow"><i class="fas fa-comment-alt"></i></div>

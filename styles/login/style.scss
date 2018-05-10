@@ -14,6 +14,11 @@ body {
   justify-content: center;
   flex-direction: column;
   background: #1a0f2d;
+  h4 {
+    color: coral;
+    margin-top: 25px;
+    font-weight: normal;
+  }
 }
 
 .content form {
@@ -55,4 +60,5 @@ body {
   color: white;
   cursor: pointer;
 }
+
 /*# sourceMappingURL=style.css.map */
