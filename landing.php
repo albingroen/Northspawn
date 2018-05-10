@@ -1,3 +1,8 @@
+<?php 
+  $news = $db->prepare("SELECT * FROM newsItems");
+  $news->execute();
+?>
+
 <div class="content">
   <!-- <?php 
   
@@ -47,6 +52,26 @@ COOKIES;
     </div>
     <div class="right" id="right3"></div>
   </section>
+
+  <div class="newsFeed">
+    <?php
+
+      while($newsItem = $news->fetch()){
+        echo <<<NEWSITEM
+        <div class="newsItem">
+          <h2>{$newsItem['title']}</h2>
+          <p>{$newsItem['text']}</p>
+          <div class="bottom">
+            <h4>{$newsItem['date']}</h4>
+            <h4>{$newsItem['author']}</h4>
+          </div>
+        </div>
+NEWSITEM;
+      } 
+
+    ?>
+  </div>
+
 </div>
 <style>
   <?php include('styles/landing/style.css') ?>

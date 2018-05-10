@@ -244,4 +244,42 @@ section .left p {
 .cookies input:hover {
   background: #006ad1;
 }
+
+.newsFeed {
+  max-width: 900px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.newsFeed .newsItem {
+  padding: 30px;
+  border: 1.5px dashed #dbdbdb;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.newsFeed .newsItem h2 {
+  padding-bottom: 15px;
+  color: #4a3068;
+}
+
+.newsFeed .newsItem p {
+  color: #5a5a5a;
+  font-size: 15px;
+  padding-bottom: 35px;
+  line-height: 25px;
+}
+
+.newsFeed .newsItem .bottom {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  bottom: 20px;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

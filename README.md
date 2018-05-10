@@ -180,12 +180,12 @@ https://webbriktlinjer.se/testa-din-webbplats/?start
 
 ## To-do regarding general test
 
-* [ ] Make responsive
-* [ ] Better navigation
+* [x] Make responsive
+* [x] Better navigation
 * [ ] Zoom-comaptablities
-* [ ] Bigger clickable areas for mobile users
+* [x] Bigger clickable areas for mobile users
 * [ ] Add contact info in footer
-* [ ] Show focus when navigating with keyboard
+* [x] Show focus when navigating with keyboard
 
 ### Broswer test
 
