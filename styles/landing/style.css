@@ -292,14 +292,57 @@ section .left p {
 }
 
 .newsFeed .newsItem .bottom {
-  position: absolute;
-  left: 25px;
-  right: 25px;
-  bottom: 20px;
   opacity: 0.5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.newsFeed .newsItem form {
+  margin-top: 35px;
+}
+
+.newsFeed .newsItem form input {
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% - 30px);
+  background: #FAFAFA;
+  border-radius: 3px;
+  border: 1px solid #E1E1E1;
+  font-size: 15px;
+  transition: .2s ease-out 0s;
+}
+
+.newsFeed .newsItem form input:focus {
+  outline: none;
+  background: #f2efef;
+  transition: .2s ease-out 0s;
+}
+
+.newsFeed .newsItem form button {
+  height: 40px;
+  width: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 18px;
+  background: #266EFA;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.comment {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  border: 1px solid #dbdbdb;
+  justify-content: space-between;
+  flex-direction: row;
 }
 /*# sourceMappingURL=style.css.map */

@@ -31,7 +31,6 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   h2 {
     color: white;
     text-transform: uppercase;
@@ -45,7 +44,6 @@ span {
       padding-top: 50px;
     }
   }
-
   .date {
     border: 1.5px solid rgba(255, 255, 255, 0.158);
     border-radius: 5px;
@@ -60,7 +58,6 @@ span {
       padding-right: 0;
       width: 70%;
     }
-
     h4 {
       color: rgba(255, 255, 255, 0.315);
       font-size: 20px;
@@ -70,7 +67,6 @@ span {
         font-size: 16.5px;
       }
     }
-
     h3 {
       color: white;
       font-size: 25px;
@@ -80,7 +76,6 @@ span {
       }
     }
   }
-
   p {
     color: rgba(255, 255, 255, 0.5);
     padding-top: 50px;
@@ -108,7 +103,6 @@ section {
     flex-direction: column;
     justify-content: center;
   }
-
   .right {
     background-position: center;
     background-size: cover;
@@ -118,19 +112,15 @@ section {
       width: 100%;
     }
   }
-
   #right1 {
     background-image: url('./imgs/lan.jpg');
   }
-
   #right2 {
     background-image: url('./imgs/games-bg.png');
   }
-
   #right3 {
     background-image: url('./imgs/hackathon.jpg');
   }
-
   .left {
     width: calc(50% - 100px);
     padding: 50px;
@@ -145,14 +135,12 @@ section {
       align-items: center;
       padding-top: 40px;
     }
-
     h2 {
       font-size: 33px;
       @media (max-width: 768px) {
         font-size: 25px;
       }
     }
-
     p {
       font-size: 16px;
       margin-top: 20px;
@@ -189,13 +177,11 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   p {
     margin-left: 75px;
     font-size: 17px;
     color: white;
   }
-
   input {
     margin-right: 75px;
     background: darken(dodgerblue, 10%);
@@ -219,7 +205,6 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
   .title {
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -232,36 +217,71 @@ section {
       padding-top: 50px;
     }
   }
-
   .newsItem {
     padding: 30px;
     border: 1.5px dashed #dbdbdb;
     border-radius: 5px;
     position: relative;
     margin-top: 50px;
-
     h2 {
       padding-bottom: 15px;
       color: #4a3068;
     }
-
     p {
       color: rgb(90, 90, 90);
       font-size: 15px;
       padding-bottom: 35px;
       line-height: 25px;
     }
-
     .bottom {
-      position: absolute;
-      left: 25px;
-      right: 25px;
-      bottom: 20px;
       opacity: 0.5;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
+    form {
+      margin-top: 35px;
+      input {
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: calc(100% - 30px);
+        background: #FAFAFA;
+        border-radius: 3px;
+        border: 1px solid #E1E1E1;
+        font-size: 15px;
+        transition: .2s ease-out 0s;
+        &:focus {
+          outline: none;
+          background: #f2efef;
+          transition: .2s ease-out 0s;
+        }
+      }
+      button {
+        height: 40px;
+        width: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 18px;
+        background: #266EFA;
+        color: white;
+        border-radius: 50px;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
   }
+}
+
+.comment {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  border: 1px solid #dbdbdb;
+  justify-content: space-between;
+  flex-direction: row;
 }

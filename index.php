@@ -135,13 +135,14 @@
         width: calc(100% - 60px);
         height: 200px;
         padding: 30px;
+        padding-top: 20px;
         display: flex;    
         color: white;
         flex-direction: column;
         border-radius: 5px 5px 0px 0px;                
       }
       #logo {
-        width: 110px;        
+        width: 120px;        
       }
       #chatWindow header h2 {
         font-size: 30px;

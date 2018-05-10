@@ -1,6 +1,19 @@
 <?php 
   $news = $db->prepare("SELECT * FROM newsItems");
   $news->execute();
+
+  $comments = $db->prepare("SELECT * FROM comments NATURAL JOIN newsItems");
+  $comments->execute(); 
+
+  // Adding a comment to a post
+  if(!empty($_POST['comment'])){
+    $comment = htmlspecialchars($_POST['comment']);
+    $newsId = $_POST['newsId'];
+    $commentAuthor = $_SESSION['user'];
+
+    $addComment = $db->prepare("INSERT INTO comments (comment_text, comment_author, news_id ) VALUES ('{$comment}', '{$commentAuthor}', {$newsId})");
+    $addComment->execute();
+  }
 ?>
 
 <div class="content">
@@ -66,8 +79,16 @@ COOKIES;
             <h4>{$newsItem['date']}</h4>
             <h4>{$newsItem['author']}</h4>
           </div>
+          <form method="POST">
+            <input placeholder="Lägg till en kommentar..." type="text" name="comment" >
+            <input type="hidden" name="newsId" value={$newsItem['news_id']}>
+            <button>Lägg till</button>
+          </form>          
         </div>
 NEWSITEM;
+        while($comment = $comments->fetch()) {
+          echo "<div class=comment><p>{$comment['comment_text']}</p><p>{$comment['comment_author']}</p></div>";
+        }
       } 
 
     ?>
