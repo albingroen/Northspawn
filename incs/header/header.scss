@@ -4,7 +4,6 @@ nav {
   display: flex;
   align-items: center;
   padding-top: 10px;
-
   ul {
     list-style-type: none;
     display: flex;
@@ -16,18 +15,15 @@ nav {
     @media (max-width: 768px) {
       display: none;
     }
-
     .left {
       .logo {
         width: 175px;
       }
     }
-
     .right {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-
       .thumbnail {
         height: 65px;
         width: 65px;
@@ -38,22 +34,18 @@ nav {
         background-position: center;
         background-size: cover;
       }
-
       .message {
         padding-left: 40px;
       }
-
       li {
         padding: 0;
         margin: 0;
         color: white;
         text-transform: uppercase;
         position: relative;
-
         .logo {
           width: 175px;
         }
-
         a {
           color: white;
           color: white;
@@ -70,7 +62,6 @@ nav {
             transition: 0.1s ease-out 0s;
           }
         }
-
         #button {
           background: white;
           color: #333;
@@ -81,7 +72,6 @@ nav {
           width: 200px;
           &:hover {
             text-decoration: none;
-
             transition: 0.2s ease-out 0s;
           }
         }
@@ -99,10 +89,8 @@ nav {
   background-image: url('./imgs/hackathon.png');
   background-position: center;
   background-size: cover;
-
   padding-left: 30px;
   padding-right: 30px;
-
   .info {
     display: flex;
     flex-direction: row;
@@ -111,7 +99,6 @@ nav {
     height: 100px;
     margin-top: 75px;
     padding-bottom: 20px;
-
     .date {
       margin: 0;
       padding: 0;
@@ -127,14 +114,12 @@ nav {
       display: none;
     }
   }
-
   h3 {
     color: white;
     text-transform: capitalize;
     opacity: 0.6;
     font-size: 20px;
   }
-
   h1 {
     text-align: center;
     color: #fff;
@@ -153,19 +138,15 @@ nav {
       font-size: 32px;
       line-height: 45px;
     }
-  }
-
-  // h1:nth-child(2) {
+  } // h1:nth-child(2) {
   //   color: #67f3da;
   //   animation: glitch2 1.5s infinite;
   // }
-
   // h1:nth-child(3) {
   //   color: #f16f6f;
   //   animation: glitch3 1.5s infinite;
   // }
   // /*Keyframes*/
-
   // @keyframes glitch1 {
   //   0% {
   //     transform: none;
@@ -220,7 +201,6 @@ nav {
   //     opacity: 1;
   //   }
   // }
-
   // @keyframes glitch2 {
   //   0% {
   //     transform: none;
@@ -275,7 +255,6 @@ nav {
   //     opacity: 0.25;
   //   }
   // }
-
   // @keyframes glitch3 {
   //   0% {
   //     transform: none;
@@ -330,7 +309,6 @@ nav {
   //     opacity: 0.25;
   //   }
   // }
-
   h2 {
     color: white;
     padding-top: 15px;
@@ -340,7 +318,6 @@ nav {
     font-weight: 400;
     letter-spacing: 1px;
   }
-
   .button-wrapper {
     display: flex;
     flex-direction: row;
@@ -350,7 +327,6 @@ nav {
       justify-content: center;
       align-items: center;
     }
-
     button {
       border: 3px solid white;
       text-transform: uppercase;
@@ -367,17 +343,15 @@ nav {
         margin: 0;
         width: 200px;
       }
-
       &:nth-child(1) {
         border-color: transparent;
-        background: dodgerblue;
+        background: #266EFA;
         &:hover {
-          background: darken(dodgerblue, 5%);
+          background: darken(#266EFA, 5%);
           color: white;
           font-weight: 500;
         }
       }
-
       &:nth-child(2) {
         margin-left: 20px;
         @media (max-width: 768px) {
@@ -385,11 +359,9 @@ nav {
           margin-top: 15px;
         }
       }
-
       &:hover {
         text-decoration: none;
         background: white;
-
         color: #333;
         transition: 0.1s ease-out 0s;
         font-weight: 700;
