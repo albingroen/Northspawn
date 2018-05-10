@@ -5,7 +5,6 @@
   } else {
     echo null;
   }
-
 ?>
 
 <div class="content">  

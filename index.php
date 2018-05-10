@@ -23,11 +23,16 @@
     $stmtDbPass = $db->prepare("SELECT user_password FROM users WHERE user_email = '{$email}'");
     $stmtDbPass->execute();
     $passwordDb = $stmtDbPass->fetch();
+    
 
     // Checking if the input details matches with the databse details for that email,
     // and then storing the email in the session
     if(password_verify($password, $passwordDb[0])){      
       $_SESSION['user'] = $email;      
+    $stmtAdmin = $db->prepare("SELECT admin FROM users WHERE user_email = '{$_SESSION['user']}'");
+    $stmtAdmin->execute();
+    $admin = $stmtAdmin->fetch();    
+    $_SESSION['admin'] = $admin[0];    
     } else {      
       header("Location: index.php?pageid=login&err=TRUE");
       exit();      

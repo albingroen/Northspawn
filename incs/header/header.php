@@ -32,8 +32,18 @@
       <li><a href="#">Om eventet</a></li>
       
     <?php 
+     if(!empty($_SESSION['admin'])){
+       if($_SESSION['admin'] === 'TRUE'){
+        echo <<<EXTRA
+        <li><a href=index.php?pageid=login>Se bokningar</a></li>
+        <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
+EXTRA;
+      } else {
+        echo "";
+      }
+     }
       // Displaying logout button + user's name if logged in, using the displayUser variable declared in landing.php
-      if(!empty($user_email)){        
+      if(!empty($_SESSION['user'])){        
         echo <<<MESSAGE
         <li><a href="index.php?pageid=landing&logout=true">Logga ut</a></li>
         <li class="message" ><a href="">Välkommen {$displayUser}</a></li>
@@ -45,7 +55,11 @@ MESSAGE;
         <li><a href=index.php?pageid=login>Logga in</a></li>
         <li><a href="index.php?pageid=register">Registrera</a></li>
 CONTENT;
-      }
+      }      
+
+
+     
+
     ?>
     </div>
   </ul>
