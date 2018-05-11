@@ -9,13 +9,13 @@
     $header = "700";
   } elseif ($_GET['pageid'] === 'login') {
     $title = "Logga in på Northspawn";
-    $header = "300";
+    $header = "350";
   } elseif ($_GET['pageid'] === 'register') {
     $title = "Registrera hos Northspawn";
-    $header = "300";
+    $header = "350";
   }  elseif ($_GET['pageid'] === 'feedback') {
     $title = "Northspawn - feedback";
-    $header = "300";
+    $header = "350";
   }
 
 ?>

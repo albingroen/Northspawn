@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 nav {
   width: 100%;
   position: absolute;
@@ -322,7 +326,6 @@ nav {
     display: flex;
     flex-direction: row;
     padding-top: 40px;
-
     @media (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
@@ -336,10 +339,9 @@ nav {
       background: none;
       font-weight: 400;
       letter-spacing: 0.5px;
+      border-radius: 50px;
       transition: 0.1s ease-out 0s;
       cursor: pointer;
-      border-radius: 5px;
-
       @media (max-width: 768px) {
         margin: 0;
         width: 200px;
@@ -347,14 +349,12 @@ nav {
       &:nth-child(1) {
         border-color: transparent;
         background: #266efa;
-        border-radius: 5px;
         &:hover {
           background: darken(#266efa, 5%);
           color: white;
         }
       }
       &:nth-child(2) {
-        border-radius: 5px;
         color: white;
         margin-left: 20px;
         @media (max-width: 768px) {

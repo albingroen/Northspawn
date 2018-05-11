@@ -137,6 +137,7 @@
         -webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         -moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
+        overflow-y: scroll;
       }
       #chatWindow header {
         background: #311C49;
@@ -153,7 +154,7 @@
         width: 120px;        
       }
       #chatWindow header h2 {
-        font-size: 30px;
+        font-size: 28px;
         color: white;
         padding-top: 10px;
         font-weight: normal;
@@ -167,17 +168,22 @@
         width: 90%;
         margin: 0 auto;
       }
+      .content-cards {
+        width: 90%;
+        margin: 0 auto;
+      }
       .modal {
         background: white;
         border-radius: 3px;
         width: calc(100% - 30px);        
-        height: 100px;
+        min-height: 100px;
         margin-top: -50px;
         -webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         -moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         padding: 15px;
         border-top: 2px solid dodgerblue;
+        margin-bottom: 70px;
       }
       .modal input {        
         height: 40px;
@@ -199,8 +205,9 @@
         transition: .2s ease-out 0s;
       }
       .modal-title {
-        color: dodgerblue;
+        color: #333;
         padding-bottom: 5px;
+        font-size: 16px;
       }
       .modal p {
         font-size: 13px;
@@ -260,6 +267,13 @@
         transform: rotate(-180deg);
         transition: .3s linear 0s;
       }
+      .contact-link {
+        color: dodgerblue;
+        text-decoration: none;
+        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 14px;
+      }
       
     </style>
   </head>
@@ -280,16 +294,31 @@
       <div class="modal">
         <input name="feedback" type="text" placeholder="Feedback" min="1" max="500" required  >
         <button>Skicka feedback</button>
-      </div>      
-      <br>
-      <br>
-      <br>
-      
+      </div>                      
+    </form>
+    <div class="content-cards">
       <div class="modal">
         <h3 class="modal-title" >Feedback</h3>
         <p>Här kan du skicka in feedback eller ställa frågor till teamet på Northspawn. Alla frågor besvaras så snabbt som möjligt.</p>
       </div>
-    </form>
+
+      <div class="modal">
+        <h3 class="modal-title" >Kontakt</h3>
+        <div>
+          <a class="contact-link" href="">info@northspawn.se</a>
+        </div>
+        <div>
+          <a class="contact-link" href="">Kopparbergsvägen 8, 722 13 Västerås</a>
+        </div>
+      </div>      
+      
+      <div class="modal">
+        <h3 class="modal-title" >Om sidan</h3>        
+        <div>
+          <p>Den här webbplatsen är ett elevproducerat slutprojekt i kursen webbserverprogrammering på Wijkmanska gymnasiet vårterminen 2018. Den ska inte förväxlas med den officiella sidan för Nortspawn-eventet som kan hittas på <a target="blank" href="https://www.northspawn.se/">northspawn.se</a>. Är du nyfiken på webbutveckling eller inriktningen IT & Media på teknikprogrammet? Gå till <a target="blank" href="http://www1.vasteras.se/wijkmanska/">wijkmanska.se</a> för att få mer info.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div onClick="openWindow()" id="chatWindowBtn"><i class="fas fa-comment-alt"></i></div>  
   <div onClick="closeWindow()" id="chatWindowBtn2"><i class="fas fa-times"></i></div>  
