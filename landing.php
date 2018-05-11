@@ -1,18 +1,20 @@
 <?php 
-  $news = $db->prepare("SELECT * FROM newsItems");
+  $news = $db->prepare("SELECT * FROM newsItems LEFT JOIN comments USING (news_id)");
   $news->execute();
 
-  $comments = $db->prepare("SELECT * FROM comments NATURAL JOIN newsItems");
-  $comments->execute(); 
+
+
+  // $comments = $db->prepare("SELECT * FROM comments NATURAL JOIN newsItems");
+  // $comments->execute(); 
 
   // Adding a comment to a post
   if(!empty($_POST['comment'])){
     $comment = htmlspecialchars($_POST['comment']);
-    $newsId = $_POST['newsId'];
+    $newsId = htmlspecialchars($_POST['newsId']);    
     $commentAuthor = $_SESSION['user'];
 
     $addComment = $db->prepare("INSERT INTO comments (comment_text, comment_author, news_id ) VALUES ('{$comment}', '{$commentAuthor}', {$newsId})");
-    $addComment->execute();
+    $addComment->execute();    
   }
 ?>
 
@@ -70,7 +72,7 @@ COOKIES;
     <h2 class="title">Nyheter om eventet</h2>
     <?php
 
-      while($newsItem = $news->fetch()){
+      while($newsItem = $news->fetch()){        
         echo <<<NEWSITEM
         <div class="newsItem">
           <h2>{$newsItem['title']}</h2>
@@ -82,18 +84,16 @@ COOKIES;
           <form method="POST">
             <input placeholder="Lägg till en kommentar..." type="text" name="comment" >
             <input type="hidden" name="newsId" value={$newsItem['news_id']}>
-            <button>Lägg till</button>
-          </form>          
-        </div>
+            <button>Lägg till</button>            
+          </form>                    
+        </div>        
 NEWSITEM;
-        while($comment = $comments->fetch()) {
-          echo "<div class=comment><p>{$comment['comment_text']}</p><p>{$comment['comment_author']}</p></div>";
-        }
-      } 
-
+        if($newsItem['comment_text'] != null){
+          echo "<div class=comment ><p>{$newsItem['comment_text']}</p><p>{$newsItem['comment_author']}</p></div>";
+        }        
+      }        
     ?>
   </div>
-
 </div>
 <style>
   <?php include('styles/landing/style.css') ?>

@@ -95,11 +95,20 @@
 
   // Adding feedback to database
   if(!empty($_POST['feedback'])){
-    $feedback = htmlspecialchars($_POST['feedback']);
-    $stmtFeedback = $db->prepare("INSERT INTO feedback (text, author) VALUES ('{$feedback}', '{$_SESSION['user']}')");
-    $stmtFeedback->execute();
-    header("Location: index.php");
-    exit();
+    if(!empty($_SESSION['user'])){
+      $feedback = htmlspecialchars($_POST['feedback']);
+      $stmtFeedback = $db->prepare("INSERT INTO feedback (text, author) VALUES ('{$feedback}', '{$_SESSION['user']}')");
+      $stmtFeedback->execute();
+      header("Location: index.php");
+      exit();
+    } else {
+      
+      $feedback = htmlspecialchars($_POST['feedback']);
+      $stmtFeedback = $db->prepare("INSERT INTO feedback (text) VALUES ('{$feedback}')");
+      $stmtFeedback->execute();
+      header("Location: index.php");
+      exit();
+    }
   }
 	
 	// Building page depending on GET parameters to index.php
@@ -117,8 +126,8 @@
     <style>
       #chatWindow {
         position: fixed;
-        height: 650px;
-        max-width: 400px;
+        height: 680px;
+        max-width: 370px;
         right: 30px;
         bottom: 100px;
         background: white;
@@ -148,6 +157,7 @@
         font-size: 30px;
         color: white;
         padding-top: 10px;
+        font-weight: normal;
         <?php 
           if(!empty($_SESSION['user'])){
             echo "text-transform: capitalize";
@@ -168,6 +178,7 @@
         -moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         padding: 15px;
+        border-top: 2px solid dodgerblue;
       }
       .modal input {        
         height: 40px;
@@ -187,6 +198,16 @@
         outline: none;
         background: #f2efef;
         transition: .2s ease-out 0s;
+      }
+      .modal-title {
+        color: dodgerblue;
+        padding-bottom: 5px;
+      }
+      .modal p {
+        font-size: 13px;
+        opacity: .7;
+        line-height: 18px;
+        padding-right: 20px;
       }
       .modal button {
         height: 40px;
@@ -237,6 +258,8 @@
         -webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         -moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
+        transform: rotate(-180deg);
+        transition: .3s linear 0s;
       }
       
     </style>
@@ -247,11 +270,11 @@
       <h2>Hej, 
       <?php 
         if(!empty($_SESSION['user'])){
-          echo $displayUser;
+          echo $displayUser , " 👋";
         } else {
-          echo "ge oss gärna feedback";
-        }
-      ?>
+          echo "ge oss gärna feedback 👍";
+        }      
+      ?>          
       </h2>
     </header>
     <form method="post">
@@ -259,6 +282,14 @@
         <input name="feedback" type="text" placeholder="Feedback" min="1" max="500" required  >
         <button>Skicka feedback</button>
       </div>      
+      <br>
+      <br>
+      <br>
+      
+      <div class="modal">
+        <h3 class="modal-title" >Feedback</h3>
+        <p>Här kan du skicka in feedback eller ställa frågor till teamet på Northspawn. Alla frågor besvaras så snabbt som möjligt.</p>
+      </div>
     </form>
   </div>
   <div onClick="openWindow()" id="chatWindowBtn"><i class="fas fa-comment-alt"></i></div>  
@@ -268,22 +299,24 @@
     function openWindow() {
       document.getElementById("chatWindow").style.display = "block";
       document.getElementById("chatWindowBtn").style.display = "none";
-      document.getElementById("chatWindowBtn2").style.display = "flex";
+      document.getElementById("chatWindowBtn2").style.display = "flex";            
       setTimeout(() => {
         document.getElementById("chatWindow").style.opacity = 1;
         document.getElementById("chatWindow").style.bottom = '130px';
+        document.getElementById("chatWindowBtn2").style.transform = "rotate(0deg)";
       }, 100);
     }    
     document.getElementById("chatWindowBtn").addEventListener("click", openWindow);
 
     function closeWindow() {                 
       document.getElementById("chatWindow").style.opacity = 0;
-      document.getElementById("chatWindow").style.bottom = '100px';
-      document.getElementById("chatWindowBtn2").style.display = "none";
+      document.getElementById("chatWindow").style.bottom = '100px';      
       document.getElementById("chatWindowBtn").style.display = "flex";
+      document.getElementById("chatWindowBtn2").style.transform = "rotate(-180deg)";
       setTimeout(() => {
         document.getElementById("chatWindow").style.display = "none";        
-        document.getElementById("chatWindow").style.opacity = 0;       
+        document.getElementById("chatWindow").style.opacity = 0;   
+        document.getElementById("chatWindowBtn2").style.display = "none";    
       }, 500);
     }    
     document.getElementById("chatWindowBtn2").addEventListener("click", closeWindow);
