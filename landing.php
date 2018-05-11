@@ -95,6 +95,4 @@ NEWSITEM;
     ?>
   </div>
 </div>
-<style>
-  <?php include('styles/landing/style.css') ?>
-</style>
+

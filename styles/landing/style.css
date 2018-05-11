@@ -142,15 +142,15 @@ section .right {
 }
 
 section #right1 {
-  background-image: url("./imgs/lan.jpg");
+  background-image: url("./imgs/lan-min.jpg");
 }
 
 section #right2 {
-  background-image: url("./imgs/games-bg.png");
+  background-image: url("./imgs/games-bg-min.png");
 }
 
 section #right3 {
-  background-image: url("./imgs/hackathon.jpg");
+  background-image: url("./imgs/hackathon-min.jpg");
 }
 
 section .left {
@@ -308,17 +308,17 @@ section .left p {
   padding-left: 15px;
   padding-right: 15px;
   width: calc(100% - 30px);
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 3px;
-  border: 1px solid #E1E1E1;
+  border: 1px solid #e1e1e1;
   font-size: 15px;
-  transition: .2s ease-out 0s;
+  transition: 0.2s ease-out 0s;
 }
 
 .newsFeed .newsItem form input:focus {
   outline: none;
   background: #f2efef;
-  transition: .2s ease-out 0s;
+  transition: 0.2s ease-out 0s;
 }
 
 .newsFeed .newsItem form button {
@@ -327,7 +327,7 @@ section .left p {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 18px;
-  background: #266EFA;
+  background: #266efa;
   color: white;
   border-radius: 50px;
   border: none;

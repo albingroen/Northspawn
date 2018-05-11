@@ -3,19 +3,14 @@
   // Changing title of website depending on where you are
   if(!isset($_GET['pageid'])){
     $title = "Lan. E-sport. Gaming. Hackathon. Expo. Välkommen till Northspawn";  
-    $header = "700";
   } elseif ($_GET['pageid'] === 'landing') {
     $title = "Lan. E-sport. Gaming. Hackathon. Expo. Välkommen till Northspawn";  
-    $header = "700";
   } elseif ($_GET['pageid'] === 'login') {
     $title = "Logga in på Northspawn";
-    $header = "300";
   } elseif ($_GET['pageid'] === 'register') {
     $title = "Registrera hos Northspawn";
-    $header = "300";
   }  elseif ($_GET['pageid'] === 'feedback') {
     $title = "Northspawn - feedback";
-    $header = "300";
   }
 
 ?>
@@ -53,7 +48,6 @@ MESSAGE;
             echo <<<EXTRA
             <li><a href=index.php?pageid=login>Se bokningar</a></li>
             <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
-            <li><a href="index.php?pageid=feedback">Se feedback</a></li>
 EXTRA;
           } else {
             echo "<div class=thumbnail></div>";
@@ -70,29 +64,12 @@ CONTENT;
     </div>
   </ul>
 </nav>
-<div class="header" style="min-height: <?php echo $header; ?>px" >
+<div class="header">
   <h1><?php echo $title; ?></h1>
-  <?php 
-    // Adding the buttons only on landing-page
-    if(!empty($_GET['pageid'])){
-      if($_GET['pageid'] === 'landing'){
-        echo <<<BUTTONS
-        <div class="button-wrapper">
-          <a href="index.php?pageid=register"><button>Skapa konto</button></a>
-          <button>Läs mer</button>
-        </div>
-BUTTONS;
-      } 
-    } else {
-      echo <<<BUTTONS
-      <div class="button-wrapper">
-        <a href="index.php?pageid=register"><button>Skapa konto</button></a>
-        <button>Läs mer</button>
-      </div>
-BUTTONS;
-    }
-  
-  ?>
+  <div class="button-wrapper">
+    <a href="index.php?pageid=register"><button>Skapa konto</button></a>
+    <button>Läs mer</button>
+  </div>
 </div>
 <style>
   <?php include('header.css') ?>

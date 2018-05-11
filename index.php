@@ -82,8 +82,6 @@
     if(htmlspecialchars($_POST['password']) === $confirmedPasword){
       $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
       $stmt->execute();
-    } else {
-      echo '';
     }
 
     // Send a email after registration to user    
@@ -101,10 +99,9 @@
       $stmtFeedback->execute();
       header("Location: index.php");
       exit();
-    } else {
-      
+    } else {      
       $feedback = htmlspecialchars($_POST['feedback']);
-      $stmtFeedback = $db->prepare("INSERT INTO feedback (text) VALUES ('{$feedback}')");
+      $stmtFeedback = $db->prepare("INSERT INTO feedback (text, author) VALUES ('{$feedback}', 'Anonym')");
       $stmtFeedback->execute();
       header("Location: index.php");
       exit();
@@ -112,11 +109,13 @@
   }
 	
 	// Building page depending on GET parameters to index.php
-	require("incs/header/header.php");	
-	
-	require("{$pageid}.php");	
-	
-	require("incs/footer/footer.php");	
+  require("incs/header/header.php");	
+
+  require("{$pageid}.php");
+
+  require("incs/footer/footer.php");	   
+  
+  
 
   ?>
   <head>
@@ -321,3 +320,7 @@
     }    
     document.getElementById("chatWindowBtn2").addEventListener("click", closeWindow);
   </script>
+
+  <style>
+    <?php include('styles/landing/style.css') ?>
+  </style>

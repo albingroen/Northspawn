@@ -188,17 +188,16 @@ nav ul .right li #button:hover {
 }
 
 .header .button-wrapper button {
-  border: 3px solid white;
-  text-transform: uppercase;
-  font-size: 14px;
+  border: 2px solid white;
+  font-size: 16px;
   color: white;
-  padding: 15px 30px 15px 30px;
+  padding: 15px 25px 15px 25px;
   background: none;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   transition: 0.1s ease-out 0s;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -210,16 +209,18 @@ nav ul .right li #button:hover {
 
 .header .button-wrapper button:nth-child(1) {
   border-color: transparent;
-  background: #266EFA;
+  background: #266efa;
+  border-radius: 5px;
 }
 
 .header .button-wrapper button:nth-child(1):hover {
   background: #0d5df9;
   color: white;
-  font-weight: 500;
 }
 
 .header .button-wrapper button:nth-child(2) {
+  border-radius: 5px;
+  color: white;
   margin-left: 20px;
 }
 
@@ -227,6 +228,8 @@ nav ul .right li #button:hover {
   .header .button-wrapper button:nth-child(2) {
     margin-left: 0;
     margin-top: 15px;
+    font-weight: 700;
+    background: white;
   }
 }
 
@@ -235,6 +238,5 @@ nav ul .right li #button:hover {
   background: white;
   color: #333;
   transition: 0.1s ease-out 0s;
-  font-weight: 700;
 }
 /*# sourceMappingURL=header.css.map */
