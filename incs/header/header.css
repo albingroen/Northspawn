@@ -224,6 +224,7 @@ nav ul .right li #button:hover {
 .header .button-wrapper button:nth-child(2) {
   color: white;
   margin-left: 20px;
+  background: none;
 }
 
 @media (max-width: 768px) {

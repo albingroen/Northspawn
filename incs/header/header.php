@@ -16,6 +16,15 @@
   }  elseif ($_GET['pageid'] === 'feedback') {
     $title = "Northspawn - feedback";
     $header = "350";
+  } elseif ($_GET['pageid'] === 'products') {
+    $title = "Välj en produkt i shopen";    
+    $header = "350";
+  } elseif ($_GET['pageid'] === 'cart') {
+    $title = "Kundvagn";    
+    $header = "350";
+  } elseif ($_GET['pageid'] === 'orders') {
+    $title = "Ordrar";    
+    $header = "250";
   }
 
 ?>

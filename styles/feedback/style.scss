@@ -1,0 +1,36 @@
+.orders-wrapper {
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orders {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  max-width: 1000px;
+  padding: 50px;
+  @media (max-width: 1000px) {
+    grid-template-columns: auto auto auto;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: auto;
+  }
+}
+
+.order {
+  background: #282828;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  margin: 10px;
+  min-height: 50px;
+}
+
+.order h3 {
+  padding-top: 30px;
+  opacity: .4;
+}
