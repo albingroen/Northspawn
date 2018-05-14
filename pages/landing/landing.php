@@ -96,3 +96,6 @@ NEWSITEM;
   </div>
 </div>
 
+<style>
+  <?php include('style.css') ?>
+</style>

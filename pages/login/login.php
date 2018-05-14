@@ -22,5 +22,5 @@
 </div>
 
 <style>
-  <?php include('styles/login/style.css') ?>
+  <?php include('style.css') ?>
 </style>

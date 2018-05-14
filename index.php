@@ -111,7 +111,7 @@
 	// Building page depending on GET parameters to index.php
   require("incs/header/header.php");	
 
-  require("{$pageid}.php");
+  require("pages/{$pageid}/{$pageid}.php");
 
   require("incs/footer/footer.php");	   
   
@@ -312,12 +312,7 @@
         </div>
       </div>      
       
-      <div class="modal">
-        <h3 class="modal-title" >Om sidan</h3>        
-        <div>
-          <p>Den här webbplatsen är ett elevproducerat slutprojekt i kursen webbserverprogrammering på Wijkmanska gymnasiet vårterminen 2018. Den ska inte förväxlas med den officiella sidan för Nortspawn-eventet som kan hittas på <a target="blank" href="https://www.northspawn.se/">northspawn.se</a>. Är du nyfiken på webbutveckling eller inriktningen IT & Media på teknikprogrammet? Gå till <a target="blank" href="http://www1.vasteras.se/wijkmanska/">wijkmanska.se</a> för att få mer info.</p>
-        </div>
-      </div>
+      
     </div>
   </div>
   <div onClick="openWindow()" id="chatWindowBtn"><i class="fas fa-comment-alt"></i></div>  
@@ -351,5 +346,5 @@
   </script>
 
   <style>
-    <?php include('styles/landing/style.css') ?>
+    <?php include('pages/landing/style.css') ?>
   </style>

@@ -11,6 +11,6 @@
   </form>
 </div>
 <style>
-  <?php include('styles/register/style.css') ?>
+  <?php include('style.css') ?>
 </style>
 

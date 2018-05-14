@@ -30,5 +30,5 @@ ORDERS;
 </ul>
 
 <style>
-  <?php include('./styles/feedback/style.css') ?>
+  <?php include('style.css') ?>
 </style>
