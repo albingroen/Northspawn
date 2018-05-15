@@ -52,6 +52,7 @@
     <div class="right" >
       <li><a href="index.php">Start</a></li>
       <li><a href="#">Om eventet</a></li>      
+      <li><a href="index.php?pageid=products">Biljetter</a></li>
     <?php 
      
       // Displaying logout button + user's name if logged in, using the displayUser variable declared in landing.php
@@ -69,7 +70,7 @@ MESSAGE;
             <li><i id="closeBtn" class="fas fa-minus-square"></i></li>
             <div id="menu">
               <ul>
-                <li><a href=index.php?pageid=login>Se bokningar</a></li>
+                <li><a href=index.php?pageid=orders>Se ordrar</a></li>
                 <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
                 <li><a href="index.php?pageid=feedback">Se feedback</a></li>
               </ul>

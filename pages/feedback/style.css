@@ -7,9 +7,8 @@
 
 .feedback {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  max-width: 1000px;
   padding: 50px;
+  grid-template-columns: auto auto auto auto;
 }
 
 @media (max-width: 1000px) {
@@ -18,13 +17,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .feedback {
     grid-template-columns: auto auto;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .feedback {
     grid-template-columns: auto;
   }
