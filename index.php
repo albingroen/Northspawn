@@ -139,6 +139,15 @@
         box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         overflow-y: scroll;
       }
+      @media (max-width: 768px) {
+        #chatWindow {
+          height: 100vh;
+          bottom: 0 !important;
+          right: 0 !important;
+          max-width: 100% !important;
+          
+        }
+      }
       #chatWindow header {
         background: #311C49;
         width: calc(100% - 60px);
