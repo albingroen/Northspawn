@@ -1,4 +1,5 @@
 <?php 
+  
   if(!empty($_POST['product'])){    
     $userIdStmt = $db->prepare("SELECT user_id FROM users WHERE user_email = '{$_SESSION['user']}' ");
     $userIdStmt->execute();
@@ -24,7 +25,7 @@
     $productOrder->execute();    
   }  
 ?>
-<h2>Kundvagn</h2>
+<h2>Ditt köp har gått igenom</h2>
 <ul>
   
 </ul>

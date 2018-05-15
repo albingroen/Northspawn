@@ -25,6 +25,12 @@
   } elseif ($_GET['pageid'] === 'orders') {
     $title = "Ordrar";    
     $header = "250";
+  } elseif ($_GET['pageid'] === 'products') {
+    $title = "Northspawn - Biljetter";    
+    $header = "250";
+  } elseif ($_GET['pageid'] === 'checkout') {
+    $title = "Northspawn - Köp genomfört";    
+    $header = "300";
   }
 
 ?>
