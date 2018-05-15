@@ -8,11 +8,11 @@
 <?php 
   if(!empty($_SESSION['user'])){
     if($_SESSION['admin'] === 'TRUE'){
-      echo "<div class=orders-wrapper>";
-      echo "<div class=orders>";
+      echo "<div class=feedback-wrapper>";
+      echo "<div class=feedback>";
       while($feedback = $feedbacks->fetch()){
         echo <<<ORDERS
-        <div class="order">
+        <div class="feedbackItem">
           <h2>{$feedback['text']}</h2>
           <h3>{$feedback['author']}</h3>
         </div>

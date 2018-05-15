@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-  width: 10px;
-}
-
 nav {
   width: 100%;
   position: absolute;
@@ -61,6 +57,13 @@ nav ul .right li {
 
 nav ul .right li .logo {
   width: 175px;
+}
+
+nav ul .right li i {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-top: 3px;
+  cursor: pointer;
 }
 
 nav ul .right li a {
@@ -233,6 +236,7 @@ nav ul .right li #button:hover {
     margin-top: 15px;
     font-weight: 700;
     background: white;
+    color: #333;
   }
 }
 
@@ -241,5 +245,42 @@ nav ul .right li #button:hover {
   background: white;
   color: #333;
   transition: 0.1s ease-out 0s;
+}
+
+#closeBtn {
+  display: none;
+}
+
+#menu {
+  display: none;
+  background: #222;
+  opacity: 0;
+  transition: .2s ease-out 0s;
+  border-radius: 5px;
+  position: absolute;
+  top: 70px;
+  padding: 15px;
+}
+
+#menu ul {
+  height: 200px;
+  display: block;
+}
+
+#menu ul li {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#menu ul li a {
+  color: #fff;
+  text-align: center;
+  border: none;
+  opacity: .6;
+}
+
+#menu ul li a:hover {
+  background: rgba(255, 255, 255, 0.096);
+  opacity: .8;
 }
 /*# sourceMappingURL=header.css.map */

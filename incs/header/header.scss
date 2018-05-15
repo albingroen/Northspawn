@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-  width: 10px;
-}
-
 nav {
   width: 100%;
   position: absolute;
@@ -49,6 +45,12 @@ nav {
         position: relative;
         .logo {
           width: 175px;
+        }
+        i {
+          font-size: 25px;
+          margin-left: 10px;
+          margin-top: 3px;
+          cursor: pointer;
         }
         a {
           color: white;
@@ -363,6 +365,7 @@ nav {
           margin-top: 15px;
           font-weight: 700;
           background: white;
+          color: #333;
         }
       }
       &:hover {
@@ -370,6 +373,39 @@ nav {
         background: white;
         color: #333;
         transition: 0.1s ease-out 0s;
+      }
+    }
+  }
+}
+
+#closeBtn {
+  display: none;
+}
+
+#menu {
+  display: none;
+  background: #222;
+  opacity: 0;
+  transition: .2s ease-out 0s;
+  border-radius: 5px;
+  position: absolute;
+  top: 70px;
+  padding: 15px;
+  ul {
+    height: 200px;
+    display: block;
+    li {
+      margin-top: 20px;
+      text-align: center;
+      a {
+        color: #fff;
+        text-align: center;
+        border: none;
+        opacity: .6;
+        &:hover {
+          background: rgba(255, 255, 255, 0.096);
+          opacity: .8;
+        }
       }
     }
   }

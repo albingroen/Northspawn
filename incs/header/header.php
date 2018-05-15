@@ -45,8 +45,7 @@
     </div>
     <div class="right" >
       <li><a href="index.php">Start</a></li>
-      <li><a href="#">Om eventet</a></li>
-      
+      <li><a href="#">Om eventet</a></li>      
     <?php 
      
       // Displaying logout button + user's name if logged in, using the displayUser variable declared in landing.php
@@ -60,9 +59,15 @@ MESSAGE;
         if(!empty($_SESSION['admin'])){
           if($_SESSION['admin'] === 'TRUE'){
             echo <<<EXTRA
-            <li><a href=index.php?pageid=login>Se bokningar</a></li>
-            <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
-            <li><a href="index.php?pageid=feedback">Se feedback</a></li>
+            <li><i id="menuBtn" class="fas fa-caret-square-down"></i></li>
+            <li><i id="closeBtn" class="fas fa-minus-square"></i></li>
+            <div id="menu">
+              <ul>
+                <li><a href=index.php?pageid=login>Se bokningar</a></li>
+                <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
+                <li><a href="index.php?pageid=feedback">Se feedback</a></li>
+              </ul>
+            </div>
 EXTRA;
           } else {
             echo "<div class=thumbnail></div>";
@@ -107,3 +112,25 @@ BUTTONS;
   <?php include('header.css') ?>
 </style>
 
+<script>
+  // Making opening and closing extra features possible
+  function openMenu(){
+    document.getElementById("menu").style.display = "block"; 
+    document.getElementById("closeBtn").style.display = "block"; 
+    document.getElementById("menuBtn").style.display = "none"; 
+    setTimeout(() => {
+      document.getElementById("menu").style.opacity = 1;       
+    }, 100);
+  }
+  document.getElementById("menuBtn").addEventListener("click", openMenu);
+
+  function closeMenu(){
+    document.getElementById("menu").style.opacity = 0;    
+    document.getElementById("closeBtn").style.display = "none"; 
+    document.getElementById("menuBtn").style.display = "block"; 
+    setTimeout(() => {
+      document.getElementById("menu").style.display = "none"; 
+    }, 100);
+  }
+  document.getElementById("closeBtn").addEventListener("click", closeMenu);
+</script>

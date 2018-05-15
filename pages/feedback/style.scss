@@ -1,11 +1,11 @@
-.orders-wrapper {
+.feedback-wrapper {
   background: #222;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.orders {
+.feedback {
   display: grid;
   grid-template-columns: auto auto auto auto;
   max-width: 1000px;
@@ -21,8 +21,8 @@
   }
 }
 
-.order {
-  background: #282828;
+.feedbackItem {
+  background: #353535;
   border-radius: 5px;
   padding: 20px;
   color: white;
@@ -30,7 +30,7 @@
   min-height: 50px;
 }
 
-.order h3 {
+.feedbackItem h3 {
   padding-top: 30px;
   opacity: .4;
 }
