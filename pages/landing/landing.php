@@ -9,7 +9,7 @@
     $commentAuthor = $_SESSION['user'];
 
     $addComment = $db->prepare("INSERT INTO comments (comment_text, comment_author, news_id ) VALUES ('{$comment}', '{$commentAuthor}', {$newsId})");
-    $addComment->execute();    
+    $addComment->execute();        
   }
 ?>
 
@@ -63,7 +63,7 @@ COOKIES;
     <div class="right" id="right3"></div>
   </section>
 
-  <div class="newsFeed">
+  <div class="newsFeed" id="news" >
     <h2 class="title">Nyheter om eventet</h2>
     <?php
 
@@ -76,16 +76,20 @@ COOKIES;
             <h4>{$newsItem['date']}</h4>
             <h4>{$newsItem['author']}</h4>
           </div>
+NEWSITEM;
+
+        if(!empty($user)){
+          echo <<<ADDCOMMENT
           <form method="POST">
             <input placeholder="Lägg till en kommentar..." type="text" name="comment" >
             <input type="hidden" name="newsId" value={$newsItem['news_id']}>
             <button>Lägg till</button>            
-          </form>                    
-        </div>        
-NEWSITEM;
-        // if($newsItem['comment_text'] != null){
-        //   echo "<div class=comment ><p>{$newsItem['comment_text']}</p><p>{$newsItem['comment_author']}</p></div>";
-        // } 
+          </form>
+ADDCOMMENT;
+        }
+
+        echo "</div>";
+
         $comments = $db->prepare("SELECT * FROM comments WHERE news_id = {$newsItem['news_id']}");
         $comments->execute();
         

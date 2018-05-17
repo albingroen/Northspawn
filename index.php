@@ -105,9 +105,7 @@
     } else {      
       $feedback = htmlspecialchars($_POST['feedback']);
       $stmtFeedback = $db->prepare("INSERT INTO feedback (text, author) VALUES ('{$feedback}', 'Anonym')");
-      $stmtFeedback->execute();
-      header("Location: index.php");
-      exit();
+      $stmtFeedback->execute();            
     }
   }
 	
@@ -129,7 +127,8 @@
     <style>
       #chatWindow {
         position: fixed;
-        height: 680px;
+        height: 75vh;
+        overflow-y: scroll;
         max-width: 370px;
         right: 30px;
         bottom: 100px;
