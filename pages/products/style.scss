@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .content {
   background: #1a0f2d;
   display: flex;
@@ -10,13 +15,58 @@
     max-width: 1000px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 50px;
+    grid-gap: 35px;
     .product {
       display: flex;
+      border-radius: 3px;
       flex-direction: column;
-      border: 2px solid white;
-      padding: 20px 100px 20px 20px;
+      border: 1px solid white;
+      padding: 20px;
+      width: 250px;
       color: white;
+      position: relative;
+      transition: .1s ease-out 0s;
+      &:hover {
+        background: white;
+        color: #222;
+        transition: .1s ease-out 0s;
+      }
+      &:hover i {
+        right: 20px;
+        transition: .2s ease-out 0s;
+      }
+      h2,
+      h3 {
+        padding: 0;
+        margin: 0;
+      }
+      h2 {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 17px;
+        opacity: .7;
+        padding-top: 5px;
+      }
+      i {
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        font-size: 20px;
+        transition: .2s ease-out 0s;
+      }
+      button {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
     }
   }
 }

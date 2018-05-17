@@ -359,5 +359,5 @@
   </script>
 
   <style>
-    <?php include('pages/landing/style.css') ?>
+    <?php include('main.css') ?>
   </style>
