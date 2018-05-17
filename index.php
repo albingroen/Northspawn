@@ -136,8 +136,7 @@
         opacity: 0;
         -webkit-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
         -moz-box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
-        box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);
-        overflow-y: scroll;
+        box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.1);        
       }
       @media (max-width: 768px) {
         #chatWindow {
@@ -327,6 +326,7 @@
   <div onClick="openWindow()" id="chatWindowBtn"><i class="fas fa-comment-alt"></i></div>  
   <div onClick="closeWindow()" id="chatWindowBtn2"><i class="fas fa-times"></i></div>  
 
+  
   <script>      
     function openWindow() {
       document.getElementById("chatWindow").style.display = "block";

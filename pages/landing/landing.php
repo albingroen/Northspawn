@@ -1,14 +1,6 @@
 <?php 
-  $news = $db->prepare("SELECT * FROM newsItems");
-  //  LEFT JOIN comments USING (news_id)
+  $news = $db->prepare("SELECT * FROM newsItems");  
   $news->execute();
-
-  
-
-
-
-  // $comments = $db->prepare("SELECT * FROM comments NATURAL JOIN newsItems");
-  // $comments->execute(); 
 
   // Adding a comment to a post
   if(!empty($_POST['comment'])){
@@ -96,6 +88,7 @@ NEWSITEM;
         // } 
         $comments = $db->prepare("SELECT * FROM comments WHERE news_id = {$newsItem['news_id']}");
         $comments->execute();
+        
         while($comment = $comments->fetch()){
           echo "<div class=comment ><p>{$comment['comment_text']}</p><p>{$comment['comment_author']}</p></div>";
         }      

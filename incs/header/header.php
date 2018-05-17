@@ -50,8 +50,7 @@
       <img class="logo" src="./imgs/logo_jointhegame_vit.png" alt="Logotyp">
     </div>
     <div class="right" >
-      <li><a href="index.php">Start</a></li>
-      <li><a href="#">Om eventet</a></li>      
+      <li><a href="index.php">Start</a></li>      
       <li><a href="index.php?pageid=products">Biljetter</a></li>
     <?php 
      
