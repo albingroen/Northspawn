@@ -49,6 +49,18 @@ The past days, including today, I have spent on designing and implementing at th
 
 Today, I also started doing some testing on the website to make sure everything worked properly on different browesers like Safari and Firefox. I took a general website compatability test which gave me a below average score in Sweden. The results also showed me what had to be improved on the site in general. I wrote these down and started on working on making my site responsive. I began with making the landing-page responsive, which turned out pretty good. I also decided to spin the website up on the webserver via FileZilla client to view it on a phone for the first time. Everything but the Login and Register pages looked and worked good as expected.
 
+#2018-17-05
+
+The past days I have been building and finishing up the functionality for:
+
+* Sending feedback
+* Placeing individual orders
+* Placing multiple products in cart
+* Making a fictional purchase
+* Commenting on news possible
+
+Some of these tasks were quite challanging. Making while loops inside of while loops for the comments, and nesting amoutns of SQL staments and results for placing a new order that gets handled by multiple separate tabled inside of a database. For me, learning and getting yourself into SQL JOINS and general SQL injections and selections overall really helped me understand the concept of how this work. I as well finished up building and styling the products page and cart page. Over this time I genuinly learned more of how websites work under the hoos, especially when it comes to ecommerce and web stores. Now it's time to implement the last important features on the page before presenting my work tomorrow.
+
 ---
 
 ## Tests
