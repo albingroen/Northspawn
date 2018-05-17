@@ -79,6 +79,15 @@
     $removeProduct = $db->prepare("DELETE FROM productsOrders WHERE productOrder_id = {$productOrderId} AND product_id = {$productId}");
     $removeProduct->execute();
 
+    // Adding one back to the stock after deleteing in cart
+    $oldProductStockStmt = $db->prepare("SELECT product_stock FROM products WHERE product_id = {$productId}");
+    $oldProductStockStmt->execute();
+    $oldProductStock = $oldProductStockStmt->fetch();
+    $oldProductStock = $oldProductStock[0];
+    // Remove 1 in stock from every item in order
+    $addStock = $db->prepare("UPDATE products SET product_stock = $oldProductStock + 1 WHERE product_id = {$productId}");
+    $addStock->execute();
+
     // Getting latest row's orderId from productsOrders to user later 
     $productOrderIdStmt = $db->prepare("SELECT order_id FROM productsOrders ORDER BY order_id DESC LIMIT 1");
     $productOrderIdStmt->execute();
