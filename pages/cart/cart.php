@@ -15,7 +15,7 @@
     
 
     if($orderPaid == 'TRUE'){
-      // Placing a new user with user_id
+      // Placing a new order with user_id
       // Om det inte finns en paid=False så skapa ny order. Annars använd hämta order-it:et från senaste ordern.
       $product = htmlspecialchars($_POST['product']);    
       $addUserOrder = $db->prepare("INSERT INTO orders (user_id) VALUES ($userId)");
@@ -65,8 +65,37 @@
       $removeStock = $db->prepare("UPDATE products SET product_stock = $oldProductStock - 1 WHERE product_id = {$productId}");
       $removeStock->execute();
     }
+  }
 
-    
+  if(!empty($_GET['remove']) && !empty($_POST['product_id']) && !empty($_POST['productOrder_id'])){
+    $userIdStmt = $db->prepare("SELECT user_id FROM users WHERE user_email = '{$_SESSION['user']}' ");
+    $userIdStmt->execute();
+    $userId = $userIdStmt->fetch();
+    $userId = $userId[0];  
+
+    // Removing a productOrder where productOrderId and productId matched
+    $productId = htmlspecialchars($_POST['product_id']);
+    $productOrderId = htmlspecialchars($_POST['productOrder_id']);    
+    $removeProduct = $db->prepare("DELETE FROM productsOrders WHERE productOrder_id = {$productOrderId} AND product_id = {$productId}");
+    $removeProduct->execute();
+
+    // Getting latest row's orderId from productsOrders to user later 
+    $productOrderIdStmt = $db->prepare("SELECT order_id FROM productsOrders ORDER BY order_id DESC LIMIT 1");
+    $productOrderIdStmt->execute();
+    $productOrderId = $productOrderIdStmt->fetch();
+    $productOrderId = $productOrderId[0];
+
+    // Getting the latest orderId from orders to compare to the other one
+    $orderIdStmt = $db->prepare("SELECT order_id FROM orders WHERE user_id = ${userId} ORDER BY order_id DESC LIMIT 1");
+    $orderIdStmt->execute();
+    $orderId = $orderIdStmt->fetch();
+    $orderId = $orderId[0];
+
+    // Tar bort ordern om de sista order_id:en i båda tabellerna inte matchar
+    if($productOrderId !== $orderId){
+      $deleteOrder = $db->prepare("DELETE FROM orders WHERE order_id = $orderId");
+      $deleteOrder->execute();
+    }
   }
 
   $orders = $db->prepare("SELECT * FROM users JOIN orders ON users.user_id = orders.user_id JOIN productsOrders ON orders.order_id = productsOrders.order_id JOIN products ON productsOrders.product_id = products.product_id WHERE user_email = '{$_SESSION['user']}' AND orders.paid = 'FALSE'");
@@ -81,6 +110,13 @@
         <div class="product">
           <h2>{$order['product_name']}</h2>
           <h3>{$order['product_cost']} kr</h3>
+          <p>{$order['product_desc']}</p>
+          
+          <form action="index.php?pageid=cart&remove=TRUE" method="post">            
+            <input type="hidden" name="product_id" value={$order['product_id']}>
+            <input type="hidden" name="productOrder_id" value={$order['productOrder_id']}>
+            <button><i class="fas fa-trash-alt"></i></button>
+          </form>
         </div>
 PRODUCT;
       }

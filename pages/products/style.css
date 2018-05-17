@@ -80,14 +80,6 @@
   transition: .2s ease-out 0s;
 }
 
-.content .products .product p {
-  font-size: 15px;
-  line-height: 20px;
-  opacity: .7;
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
 .content .products .product button {
   position: absolute;
   height: 100%;

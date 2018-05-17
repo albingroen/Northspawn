@@ -59,6 +59,7 @@
       // Displaying logout button + user's name if logged in, using the displayUser variable declared in landing.php
       if(!empty($_SESSION['user'])){        
         echo <<<MESSAGE
+        <li><a href="index.php?pageid=cart">Kundvagn</a></li>
         <li><a href="index.php?pageid=landing&logout=true">Logga ut</a></li>
         <li class="message" ><a href="">Välkommen {$displayUser}</a></li>        
 MESSAGE;

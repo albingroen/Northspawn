@@ -51,6 +51,14 @@
   padding-top: 5px;
 }
 
+.content .products .product p {
+  font-size: 16px;
+  line-height: 20px;
+  opacity: .7;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
 .content .products .product i {
   position: absolute;
   top: 20px;
