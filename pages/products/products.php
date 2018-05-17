@@ -11,7 +11,8 @@
             <div class="product" >
                 <form method="post" action="index.php?pageid=cart" >    
                 <h2>{$product['product_name']}</h2>
-                <h3>{$product['product_cost']}kr/biljett</h3>        
+                <h3>{$product['product_cost']}kr/biljett</h3> 
+                <h3>{$product['product_stock']}st kvar</h3>                 
                     <input type="hidden" name="product" value={$product['product_name']}>
                     <input type="hidden" name="product_id" value={$product['product_id']}>
                     <input type="hidden" name="product_cost" value={$product['product_cost']}>

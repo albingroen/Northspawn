@@ -22,7 +22,7 @@
       $addUserOrder->execute();    
 
       // Getting the latest order (users order) to display in cart
-      $orderIdStmt = $db->prepare("SELECT order_id FROM orders ORDER BY order_id DESC LIMIT 1");
+      $orderIdStmt = $db->prepare("SELECT order_id FROM orders WHERE user_id = {$userId} ORDER BY order_id DESC LIMIT 1");
       $orderIdStmt->execute();
       $orderId = $orderIdStmt->fetch();
       
@@ -34,6 +34,15 @@
       // Creating a productOrder using stmt$stmt3 details retrieved
       $productOrder = $db->prepare("INSERT INTO productsOrders (product_id, order_id) VALUES ({$productId}, {$orderId})");
       $productOrder->execute();
+
+
+      $oldProductStockStmt = $db->prepare("SELECT product_stock FROM products WHERE product_id = {$productId}");
+      $oldProductStockStmt->execute();
+      $oldProductStock = $oldProductStockStmt->fetch();
+      $oldProductStock = $oldProductStock[0];
+      // Remove 1 in stock from every item in order
+      $removeStock = $db->prepare("UPDATE products SET product_stock = $oldProductStock - 1 WHERE product_id = {$productId}");
+      $removeStock->execute();
     } else {
       // Getting the latest order (users order) to display in cart
       $orderIdStmt = $db->prepare("SELECT order_id FROM orders ORDER BY order_id DESC LIMIT 1");
@@ -46,6 +55,15 @@
 
       $productOrder = $db->prepare("INSERT INTO productsOrders (product_id, order_id) VALUES ({$productId}, {$orderId})");
       $productOrder->execute();
+
+
+      $oldProductStockStmt = $db->prepare("SELECT product_stock FROM products WHERE product_id = {$productId}");
+      $oldProductStockStmt->execute();
+      $oldProductStock = $oldProductStockStmt->fetch();
+      $oldProductStock = $oldProductStock[0];
+      // Remove 1 in stock from every item in order
+      $removeStock = $db->prepare("UPDATE products SET product_stock = $oldProductStock - 1 WHERE product_id = {$productId}");
+      $removeStock->execute();
     }
 
     

@@ -41,6 +41,20 @@
         opacity: .7;
         padding-top: 5px;
       }
+      i {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        opacity: .7;
+        transition: .1s eae-out 0s;
+        &:hover {
+          opacity: 1;
+          transition: .1s eae-out 0s;
+        }
+      }
     }
   }
   .checkoutForm {

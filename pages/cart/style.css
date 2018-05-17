@@ -51,6 +51,22 @@
   padding-top: 5px;
 }
 
+.content .products .product i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  opacity: .7;
+  transition: .1s eae-out 0s;
+}
+
+.content .products .product i:hover {
+  opacity: 1;
+  transition: .1s eae-out 0s;
+}
+
 .content .checkoutForm button {
   background: dodgerblue;
   border-radius: 50px;
