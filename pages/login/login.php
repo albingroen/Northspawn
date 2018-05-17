@@ -1,7 +1,7 @@
 <?php 
   $err = null;
   if(!empty($_GET['err'])){
-    $err = 'Password or username are incorrect';
+    $err = 'Lösenordet eller användarnamnet stämmer inte';
   } else {
     echo null;
   }

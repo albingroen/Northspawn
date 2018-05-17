@@ -1,7 +1,6 @@
 <?php
   session_start(); // Starting session
 
-
   // Connecting to the database for Northspawn project
   $db = new PDO("sqlite:Northspawn.db"); 
 
@@ -35,7 +34,7 @@
     $admin = $stmtAdmin->fetch();    
     $_SESSION['admin'] = $admin[0];    
     } else {      
-      header("Location: index.php?pageid=login&err=TRUE");
+      header("Location: index.php?pageid=login&err=LOGINFAILED");
       exit();      
     }
   }
@@ -68,27 +67,31 @@
     $_SESSION['cookies'] = FALSE;
   }
 
-  // Adding user to database
+  
   $firstName = null;
   $lastName = null;
-  
+
+  // Adding user to database
   if(isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm-password"])){
     $firstName = htmlspecialchars($_POST["firstName"]);
     $lastName = htmlspecialchars($_POST["lastName"]);
     $email = htmlspecialchars($_POST["email"]);
     $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
-    $confirmedPasword = $_POST['confirm-password'];
+    $confirmedPasword = htmlspecialchars($_POST['confirm-password']);
 
+    // If password and confirm password are the same, create account
     if(htmlspecialchars($_POST['password']) === $confirmedPasword){
       $stmt = $db->prepare("INSERT INTO users (user_firstName, user_lastName, user_email, user_password) VALUES ('{$firstName}', '{$lastName}', '{$email}', '{$password}')");
       $stmt->execute();
+    } else {
+      header("Location: index.php?pageid=register&firstName={$firstName}&lastName={$lastName}&email={$email}&err=passNotMatch");
     }
 
-    // Send a email after registration to user    
-    $msg = "First line of text\nSecond line of text";
-    $msg = wordwrap($msg,70);    
-    $subject = "Välkommen till Northspawn.se!";
-    mail("albin.groen@gmail.com", $subject, $msg); // usign $email from register to send to
+    // // Send a email after registration to user    
+    // $msg = "First line of text\nSecond line of text";
+    // $msg = wordwrap($msg,70);    
+    // $subject = "Välkommen till Northspawn.se!";
+    // mail("albin.groen@gmail.com", $subject, $msg); // usign $email from register to send to
   }
 
   // Adding feedback to database
@@ -119,6 +122,7 @@
 
   ?>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/solid.css" integrity="sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf" crossorigin="anonymous">
     

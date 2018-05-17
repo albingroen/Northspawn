@@ -1,0 +1,22 @@
+.content {
+  background: #1a0f2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  .products {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    .product {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid white;
+      padding: 20px 100px 20px 20px;
+      color: white;
+    }
+  }
+}
