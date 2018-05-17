@@ -55,14 +55,26 @@
   $orders->execute();
 
 ?>
-<h2>Kundvagn</h2>
-<ul>
+<div class="content">
+  <div class="products">
+    <?php 
+      while($order = $orders->fetch()){
+        echo <<<PRODUCT
+        <div class="product">
+          <h2>{$order['product_name']}</h2>
+          <h3>{$order['product_cost']} kr</h3>
+        </div>
+PRODUCT;
+      }
+    ?>
+    <form class="checkoutForm" action="index.php?pageid=checkout" method="post" >
+      <button>Betala biljetter</button>
+    </form>
+  </div>
+</div>
+
+<style>
   <?php 
-    while($order = $orders->fetch()){
-      echo "<li>{$order['product_name']}</li>";
-    }
+    include('style.css')
   ?>
-  <form action="index.php?pageid=checkout" method="post" >
-    <button>Köp</button>
-  </form>
-</ul>
+</style>

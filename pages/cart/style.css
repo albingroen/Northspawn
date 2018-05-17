@@ -1,0 +1,66 @@
+.content {
+  background: #1a0f2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.content .products {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .products .product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.288);
+  padding: 20px;
+  border-radius: 3px;
+  margin-top: 25px;
+  width: calc(100% - 40px);
+  color: white;
+  position: relative;
+  transition: .1s ease-out 0s;
+}
+
+.content .products .product:hover {
+  background: rgba(255, 255, 255, 0.048);
+  transition: .1s ease-out 0s;
+}
+
+.content .products .product h2,
+.content .products .product h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.content .products .product h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.content .products .product h3 {
+  font-size: 17px;
+  opacity: .7;
+  padding-top: 5px;
+}
+
+.content .checkoutForm button {
+  background: dodgerblue;
+  border-radius: 50px;
+  border: none;
+  padding: 15px 50px 15px 50px;
+  font-size: 16px;
+  margin-top: 50px;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=style.css.map */
