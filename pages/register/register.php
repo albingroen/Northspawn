@@ -18,13 +18,13 @@
       echo <<<SAVEDNAMEANDEMAIL
       <input value={$firstName} type="text" name="firstName" placeholder="Förnamn" min="2" max="268"  required >
       <input value="{$lastName}" type="text" name="lastName" placeholder="Efternamn" min="2" max="268"  required >
-      <input value="{$email}" autocomplete="new-email" type="email" name="email" placeholder="Epost-address" min="10" max="268"  required >
+      <input value="{$email}" autocomplete="new-email" type="email" name="email" placeholder="E-post adress" min="10" max="268"  required >
 SAVEDNAMEANDEMAIL;
     } else {
       echo <<<NAMEANDEMAIL
       <input type="text" name="firstName" placeholder="Förnamn" min="2" max="268"  required >
       <input type="text" name="lastName" placeholder="Efternamn" min="2" max="268"  required >
-      <input autocomplete="new-email" type="email" name="email" placeholder="Epost-address" min="10" max="268"  required >
+      <input autocomplete="new-email" type="email" name="email" placeholder="E-post adress" min="10" max="268"  required >
 NAMEANDEMAIL;
     }
     ?>

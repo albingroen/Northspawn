@@ -9,7 +9,7 @@
 
 <div class="content">  
   <form action="index.php"" method="POST">  
-    <input autocomplete="new-email" type="text" name="email" placeholder="Epost-address" required >
+    <input autocomplete="new-email" type="text" name="email" placeholder="E-post adress" required >
     <input autocomplete="new-password" type="password" name="password" placeholder="Lösenord" required >
     <input type="hidden" name="loginCheck" value="true" >
     <button>Logga in</button>    

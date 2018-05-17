@@ -47,7 +47,9 @@
 <nav>
   <ul>
     <div class="left">
-      <img class="logo" src="./imgs/logo_jointhegame_vit.png" alt="Logotyp">
+      <a href="index.php">
+        <img class="logo" src="./imgs/logo_jointhegame_vit.png" alt="Logotyp">
+      </a>
     </div>
     <div class="right" >
       <li><a href="index.php">Start</a></li>      
@@ -98,16 +100,16 @@ CONTENT;
       if($_GET['pageid'] === 'landing'){
         echo <<<BUTTONS
         <div class="button-wrapper">
-          <a href="index.php?pageid=register"><button>Skapa konto</button></a>
-          <button>Läs mer</button>
+          <a href="index.php?pageid=register"><button >Skapa konto</button></a>
+          <a href="#about"><button>Läs mer</button></a>
         </div>
 BUTTONS;
       } 
     } else {
       echo <<<BUTTONS
       <div class="button-wrapper">
-        <a href="index.php?pageid=register"><button>Skapa konto</button></a>
-        <button>Läs mer</button>
+        <a href="index.php?pageid=register"><button >Skapa konto</button></a>
+        <a href="#about"><button>Läs mer</button></a>
       </div>
 BUTTONS;
     }

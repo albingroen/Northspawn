@@ -194,57 +194,38 @@ nav ul .right li #button:hover {
   }
 }
 
-.header .button-wrapper button {
-  border: 2px solid white;
-  font-size: 16px;
-  color: white;
-  padding: 15px 25px 15px 25px;
-  background: none;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+.header .button-wrapper a:nth-child(1) button {
+  background: dodgerblue;
   border-radius: 50px;
-  transition: 0.1s ease-out 0s;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 15px 25px 15px 25px;
+  transition: .1s ease-out 0s;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .header .button-wrapper button {
-    margin: 0;
-    width: 200px;
-  }
+.header .button-wrapper a:nth-child(1) button:hover {
+  background: #0583ff;
 }
 
-.header .button-wrapper button:nth-child(1) {
-  border-color: transparent;
-  background: #266efa;
-}
-
-.header .button-wrapper button:nth-child(1):hover {
-  background: #0d5df9;
+.header .button-wrapper a:nth-child(2) button {
+  border-radius: 50px;
   color: white;
-}
-
-.header .button-wrapper button:nth-child(2) {
-  color: white;
-  margin-left: 20px;
+  font-size: 16px;
+  border: none;
+  padding: 15px 25px 15px 25px;
   background: none;
+  margin-left: 20px;
+  border: 2px solid white;
+  transition: .1s ease-out 0s;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .header .button-wrapper button:nth-child(2) {
-    margin-left: 0;
-    margin-top: 15px;
-    font-weight: 700;
-    background: white;
-    color: #333;
-  }
-}
-
-.header .button-wrapper button:hover {
-  text-decoration: none;
+.header .button-wrapper a:nth-child(2) button:hover {
   background: white;
   color: #333;
-  transition: 0.1s ease-out 0s;
+  transition: .1s ease-out 0s;
 }
 
 #closeBtn {

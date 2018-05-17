@@ -31,7 +31,7 @@ COOKIES;
     }
 
   ?> -->
-  <div class="about">
+  <div class="about" id="about" >
     <h2>Om eventet</h2>
     <div class="date">
       <h4>Aros Congress Center</h4>
