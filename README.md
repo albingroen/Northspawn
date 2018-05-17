@@ -49,7 +49,7 @@ The past days, including today, I have spent on designing and implementing at th
 
 Today, I also started doing some testing on the website to make sure everything worked properly on different browesers like Safari and Firefox. I took a general website compatability test which gave me a below average score in Sweden. The results also showed me what had to be improved on the site in general. I wrote these down and started on working on making my site responsive. I began with making the landing-page responsive, which turned out pretty good. I also decided to spin the website up on the webserver via FileZilla client to view it on a phone for the first time. Everything but the Login and Register pages looked and worked good as expected.
 
-#2018-17-05
+## 2018-17-05
 
 The past days I have been building and finishing up the functionality for:
 
