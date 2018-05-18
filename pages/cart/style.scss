@@ -65,6 +65,14 @@
           opacity: 1;
           transition: .1s eae-out 0s;
         }
+        button {
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          right: 0px;
+          opacity: 0;
+          cursor: pointer;
+        }
       }
     }
   }

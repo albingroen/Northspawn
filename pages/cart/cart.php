@@ -124,7 +124,7 @@
           <form action="index.php?pageid=cart&remove=TRUE" method="post">            
             <input type="hidden" name="product_id" value={$order['product_id']}>
             <input type="hidden" name="productOrder_id" value={$order['productOrder_id']}>
-            <button><i class="fas fa-trash-alt"></i></button>
+            <i class="fas fa-trash-alt"><button></button></i>
           </form>
         </div>
 PRODUCT;
