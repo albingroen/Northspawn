@@ -132,7 +132,9 @@ PRODUCT;
     ?>
     <form class="checkoutForm" action="index.php?pageid=checkout" method="post" >
       <button>Betala biljetter</button>
+      <a href="index.php?pageid=products">Fortsätt handla</a>
     </form>
+    
   </div>
 </div>
 

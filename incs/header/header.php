@@ -34,6 +34,9 @@
   } elseif ($_GET['pageid'] === 'addNews') {
     $title = "Northspawn - Lägg till nyhet";    
     $header = "300";
+  } elseif ($_GET['pageid'] === 'profile') {
+    $title = "Northspawn - Din profil";    
+    $header = "300";
   }
 
 ?>
@@ -64,7 +67,7 @@
         echo <<<MESSAGE
         <li><a href="index.php?pageid=cart">Kundvagn</a></li>
         <li><a href="index.php?pageid=landing&logout=true">Logga ut</a></li>
-        <li class="message" ><a href="">Välkommen {$displayUser}</a></li>        
+        <li class="message" ><a href="index.php?pageid=profile">Välkommen {$displayUser}</a></li>        
 MESSAGE;
       
         // Checking if user is a administrator and then displaying extra content
@@ -82,7 +85,7 @@ MESSAGE;
             </div>
 EXTRA;
           } else {
-            echo "<div class=thumbnail></div>";
+            echo "<a href=index.php?pageid=profile><div class=thumbnail></div></a>";
           }
         }
       } else {

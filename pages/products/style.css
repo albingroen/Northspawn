@@ -19,6 +19,18 @@
   grid-gap: 35px;
 }
 
+@media (max-width: 1300px) {
+  .content .products {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .content .products {
+    grid-template-columns: auto;
+  }
+}
+
 .content .products .product {
   display: flex;
   border-radius: 3px;
@@ -29,6 +41,12 @@
   color: white;
   position: relative;
   transition: .1s ease-out 0s;
+}
+
+@media (max-width: 900px) {
+  .content .products .product {
+    width: 75vw;
+  }
 }
 
 .content .products .product:hover {

@@ -90,7 +90,7 @@ NEWSITEM;
 
         if(!empty($user)){
           echo <<<ADDCOMMENT
-          <form method="POST">
+          <form action="index.php#news" method="POST">
             <input placeholder="Lägg till en kommentar..." type="text" name="comment" >
             <input type="hidden" name="newsId" value={$newsItem['news_id']}>
             <button>Lägg till</button>            

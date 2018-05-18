@@ -6,12 +6,19 @@
   align-items: center;
   padding-bottom: 50px;
   padding-top: 50px;
+  min-height: 43vh;
 }
 
 .content .products {
   width: 800px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .content .products {
+    width: 75vw;
+  }
 }
 
 .content .products .product {
@@ -75,7 +82,8 @@
   transition: .1s eae-out 0s;
 }
 
-.content .checkoutForm button {
+.content .checkoutForm button,
+.content .checkoutForm a {
   background: dodgerblue;
   border-radius: 50px;
   border: none;
@@ -86,5 +94,12 @@
   cursor: pointer;
   float: right;
   margin-bottom: 30px;
+}
+
+.content .checkoutForm a {
+  text-decoration: none;
+  background: white;
+  color: #222;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */

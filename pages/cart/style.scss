@@ -6,10 +6,14 @@
   align-items: center;
   padding-bottom: 50px;
   padding-top: 50px;
+  min-height: 43vh;
   .products {
     width: 800px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 900px) {
+      width: 75vw;
+    }
     .product {
       display: flex;
       flex-direction: column;
@@ -65,7 +69,8 @@
     }
   }
   .checkoutForm {
-    button {
+    button,
+    a {
       background: dodgerblue;
       border-radius: 50px;
       border: none;
@@ -76,6 +81,12 @@
       cursor: pointer;
       float: right;
       margin-bottom: 30px;
+    }
+    a {
+      text-decoration: none;
+      background: white;
+      color: #222;
+      margin-right: 20px;
     }
   }
 }

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 47vh;
+  min-height: 43vh;
 }
 
 .order {
@@ -39,8 +39,11 @@
   min-height: 50px;
 }
 
-.orderItem h3 {
-  padding-top: 30px;
-  opacity: .4;
+.orderItem p {
+  font-size: 16px;
+  line-height: 20px;
+  opacity: .7;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 /*# sourceMappingURL=style.css.map */
