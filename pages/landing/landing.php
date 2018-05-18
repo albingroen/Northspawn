@@ -1,5 +1,5 @@
 <?php 
-  $news = $db->prepare("SELECT * FROM newsItems");  
+  $news = $db->prepare("SELECT * FROM newsItems ORDER BY date DESC");  
   $news->execute();
 
   // Adding a comment to a post
@@ -11,7 +11,17 @@
     $addComment = $db->prepare("INSERT INTO comments (comment_text, comment_author, news_id ) VALUES ('{$comment}', '{$commentAuthor}', {$newsId})");
     $addComment->execute();        
   }
-?>
+
+  if(!empty($_POST['title']) && !empty($_POST['text']) && !empty($_POST['author'])){
+    $title = htmlspecialchars($_POST['title']);
+    $text = htmlspecialchars($_POST['text']);
+    $author = htmlspecialchars($_POST['author']);
+
+    $addNewsItem = $db->prepare("INSERT INTO newsItems (title, text, author) VALUES ('{$title}', '{$text}', '{$author}')");
+    $addNewsItem->execute();
+  }
+
+?>  
 
 <div class="content">
   <!-- <?php 

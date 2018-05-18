@@ -20,16 +20,19 @@
     $title = "Välj en produkt i shopen";    
     $header = "350";
   } elseif ($_GET['pageid'] === 'cart') {
-    $title = "Kundvagn";    
+    $title = "Northspawn - Kundvagn";    
     $header = "350";
   } elseif ($_GET['pageid'] === 'orders') {
-    $title = "Ordrar";    
+    $title = "Northspawn - Ordrar";    
     $header = "250";
   } elseif ($_GET['pageid'] === 'products') {
     $title = "Northspawn - Biljetter";    
     $header = "250";
   } elseif ($_GET['pageid'] === 'checkout') {
     $title = "Northspawn - Köp genomfört";    
+    $header = "300";
+  } elseif ($_GET['pageid'] === 'addNews') {
+    $title = "Northspawn - Lägg till nyhet";    
     $header = "300";
   }
 
@@ -73,7 +76,7 @@ MESSAGE;
             <div id="menu">
               <ul>
                 <li><a href=index.php?pageid=orders>Se ordrar</a></li>
-                <li><a href="index.php?pageid=register">Lägg till nyhet</a></li>
+                <li><a href="index.php?pageid=addNews">Lägg till nyhet</a></li>
                 <li><a href="index.php?pageid=feedback">Se feedback</a></li>
               </ul>
             </div>
