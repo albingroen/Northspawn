@@ -26,7 +26,7 @@
 }
 
 .about .date {
-  border: 1.5px solid rgba(255, 255, 255, 0.158);
+  border: 1.5px solid rgba(255, 255, 255, 0.377);
   border-radius: 5px;
   padding: 25px 30px 25px 30px;
   display: flex;
@@ -248,7 +248,7 @@ section .left p {
 
 .newsFeed .newsItem {
   padding: 30px;
-  border: 1.5px dashed #dbdbdb;
+  border: 1.5px dashed #cac7c7;
   border-radius: 5px;
   position: relative;
   margin-top: 50px;

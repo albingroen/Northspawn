@@ -23,7 +23,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 * [x] Idea feedback from mentors
 * [x] Project plan
 * [x] Start building
-* [ ] Finish build
+* [x] Finish build
 * [ ] Review of project
 
 ## Ideas & features

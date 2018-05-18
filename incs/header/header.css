@@ -6,6 +6,12 @@ nav {
   padding-top: 10px;
 }
 
+@media (max-width: 768px) {
+  nav {
+    margin-top: 20px;
+  }
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -16,12 +22,6 @@ nav ul {
   justify-content: space-around;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-}
-
 nav ul .left .logo {
   width: 175px;
 }
@@ -30,6 +30,12 @@ nav ul .right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  nav ul .right {
+    display: none;
+  }
 }
 
 nav ul .right .thumbnail {
@@ -191,6 +197,7 @@ nav ul .right li #button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
   }
 }
 
@@ -199,7 +206,7 @@ nav ul .right li #button:hover {
   border-radius: 50px;
   color: white;
   font-size: 16px;
-  border: none;
+  border: 2px solid dodgerblue;
   padding: 15px 25px 15px 25px;
   transition: .1s ease-out 0s;
   cursor: pointer;
@@ -207,6 +214,12 @@ nav ul .right li #button:hover {
 
 .header .button-wrapper a:nth-child(1) button:hover {
   background: #0583ff;
+}
+
+@media (max-width: 768px) {
+  .header .button-wrapper a:nth-child(1) button {
+    width: 100%;
+  }
 }
 
 .header .button-wrapper a:nth-child(2) button {
@@ -226,6 +239,16 @@ nav ul .right li #button:hover {
   background: white;
   color: #333;
   transition: .1s ease-out 0s;
+}
+
+@media (max-width: 768px) {
+  .header .button-wrapper a:nth-child(2) button {
+    margin: 0;
+    margin-top: 25px;
+    width: 140px;
+    background: white;
+    color: #333;
+  }
 }
 
 #closeBtn {

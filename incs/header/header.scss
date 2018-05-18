@@ -4,6 +4,9 @@ nav {
   display: flex;
   align-items: center;
   padding-top: 10px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
   ul {
     list-style-type: none;
     display: flex;
@@ -12,9 +15,6 @@ nav {
     margin: 0 auto;
     width: 100%;
     justify-content: space-around;
-    @media (max-width: 768px) {
-      display: none;
-    }
     .left {
       .logo {
         width: 175px;
@@ -24,6 +24,9 @@ nav {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      @media (max-width: 768px) {
+        display: none;
+      }
       .thumbnail {
         height: 65px;
         width: 65px;
@@ -332,6 +335,7 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 50%;
     }
     a {
       &:nth-child(1) {
@@ -340,12 +344,15 @@ nav {
           border-radius: 50px;
           color: white;
           font-size: 16px;
-          border: none;
+          border: 2px solid dodgerblue;
           padding: 15px 25px 15px 25px;
           transition: .1s ease-out 0s;
           cursor: pointer;
           &:hover {
             background: darken(dodgerblue, 5%);
+          }
+          @media (max-width: 768px) {
+            width: 100%;
           }
         }
       }
@@ -365,6 +372,13 @@ nav {
             background: white;
             color: #333;
             transition: .1s ease-out 0s;
+          }
+          @media (max-width: 768px) {
+            margin: 0;
+            margin-top: 25px;
+            width: 140px;
+            background: white;
+            color: #333;
           }
         }
       }
