@@ -1,5 +1,4 @@
-<?php 
-
+<?php
   // Changing title of website depending on where you are
   if(!isset($_GET['pageid'])){
     $title = "Lan. E-sport. Gaming. Hackathon. Expo. Välkommen till Northspawn";  
@@ -38,7 +37,6 @@
     $title = "Northspawn - Din profil";    
     $header = "300";
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +45,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/solid.css" integrity="sha384-VxweGom9fDoUf7YfLTHgO0r70LVNHP5+Oi8dcR4hbEjS8UnpRtrwTx7LpHq/MWLI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf" crossorigin="anonymous"> 
   <title><?php echo $title; ?></title>
 </head>
 <body>
@@ -123,29 +124,30 @@ BUTTONS;
   
   ?>
 </div>
-<style>
-  <?php include('header.css') ?>
-</style>
 
 <script>
-  // Making opening and closing extra features possible
-  function openMenu(){
-    document.getElementById("menu").style.display = "block"; 
-    document.getElementById("closeBtn").style.display = "block"; 
-    document.getElementById("menuBtn").style.display = "none"; 
-    setTimeout(() => {
-      document.getElementById("menu").style.opacity = 1;       
-    }, 100);
-  }
-  document.getElementById("menuBtn").addEventListener("click", openMenu);
+    // Making opening and closing extra features possible
+    function openMenu(){
+      document.getElementById("menu").style.display = "block"; 
+      document.getElementById("closeBtn").style.display = "block"; 
+      document.getElementById("menuBtn").style.display = "none"; 
+      setTimeout(() => {
+        document.getElementById("menu").style.opacity = 1;       
+      }, 100);
+    }
+    document.getElementById("menuBtn").addEventListener("click", openMenu);
+    function closeMenu(){
+      document.getElementById("menu").style.opacity = 0;    
+      document.getElementById("closeBtn").style.display = "none"; 
+      document.getElementById("menuBtn").style.display = "block"; 
+      setTimeout(() => {
+        document.getElementById("menu").style.display = "none"; 
+      }, 100);
+    }
+    document.getElementById("closeBtn").addEventListener("click", closeMenu);
+  </script>
 
-  function closeMenu(){
-    document.getElementById("menu").style.opacity = 0;    
-    document.getElementById("closeBtn").style.display = "none"; 
-    document.getElementById("menuBtn").style.display = "block"; 
-    setTimeout(() => {
-      document.getElementById("menu").style.display = "none"; 
-    }, 100);
-  }
-  document.getElementById("closeBtn").addEventListener("click", closeMenu);
-</script>
+<style>
+  <?php require('header.css') ?>
+</style>
+
