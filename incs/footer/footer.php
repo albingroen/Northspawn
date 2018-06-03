@@ -1,20 +1,12 @@
 <div class="footer" >
   <ul class="left" >
-    <li><a href="http://validator.w3.org/check/referer">HTML5</a></li>
-    <li><a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a></li>
-    <li><a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a></li>
-    <li><a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Test</a></li>
+    <li><a target="_blank" href="http://validator.w3.org/check/referer">HTML5</a></li>
+    <li><a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS3</a></li>
+    <li><a target="_blank" href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a></li>
+    <li><a target="_blank" href="http://www.albingroen.se">Creator: Albin Groen</a></li>
   </ul>
   <ul class="center">
-    <li><a target="blank" href="http://htmllint.com">HTML-lint</a></li>
-    <li><a target="blank" href="http://csslint.net">CSS-lint	</a></li>
-    <li><a target="blank" href="http://wave.webaim.org">Tillgänglighetstest</a></li>
-  </ul>
-   <ul class="right">
-    <li><a target="blank" href="http://tawdis.net">Tillgänglighetstest 2</a></li>
-    <li><a target="blank" href="https://webbriktlinjer.se/testa-din-webbplats/automatiska-testverktyg/ ">Tillgänglighetstest (fler)</a></li>
-    <li><a target="blank" href="https://phpcodechecker.com/">PHP Code checker</a></li>
-    <li><a target="blank" href="http://webcodesniffer.net/">PHP Code standards</a></li>  
+    <li><p id="about">Den här webbplatsen är ett elevproducerat slutprojekt i kursen webbserverprogrammering på Wijkmanska gymnasiet vårterminen 2018. Den ska inte förväxlas med den officiella sidan för Nortspawn-eventet som kan hittas på <a target="_blank" href="https://www.northspawn.se/">northspawn.se</a>. Är du nyfiken på webbutveckling eller inriktningen IT & Media på teknikprogrammet? Gå till <a target="_blank" href="http://www1.vasteras.se/wijkmanska">wijkmanska.se</a> för att få mer info.</p></li>
   </ul>
 </div>
 <style>

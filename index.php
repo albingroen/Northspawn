@@ -85,12 +85,6 @@
     } else {
       header("Location: index.php?pageid=register&firstName={$firstName}&lastName={$lastName}&email={$email}&err=passNotMatch");
     }
-
-    // // Send a email after registration to user    
-    // $msg = "First line of text\nSecond line of text";
-    // $msg = wordwrap($msg,70);    
-    // $subject = "Välkommen till Northspawn.se!";
-    // mail("albin.groen@gmail.com", $subject, $msg); // usign $email from register to send to
   }
 
   // Adding feedback to database
