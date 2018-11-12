@@ -24,7 +24,7 @@ mkdir imgs && mkdir styles && touch index.php && cd styles && touch styles.scss
 * [x] Project plan
 * [x] Start building
 * [x] Finish build
-* [ ] Review of project
+* [x] Review of project
 
 ## Ideas & features
 
